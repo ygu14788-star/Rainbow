@@ -163,7 +163,7 @@ export const IMPACT = [
 export const CONTACT = {
   address: '苏州市吴中区临湖镇石舍村4组',
   phone: '+86 180 2146 1929',
-  email: 'lena@szrainbow.cn',
+  email: 'sales@szrainbow.cn',
   hours: '周一至周五 9:00 - 18:00 (UTC+8)',
 };
 

@@ -135,7 +135,7 @@ export const IMPACT = [
 export const CONTACT = {
   address: 'Group 4, Shishe Village, Linhu Town, Wuzhong District, Suzhou, China',
   phone: '+86 180 2146 1929',
-  email: 'lena@szrainbow.cn',
+  email: 'sales@szrainbow.cn',
   hours: 'Mon–Fri 9:00 – 18:00 (UTC+8)',
 };
 
