@@ -91,8 +91,8 @@ export const VISION = [
 export const MISSION = ['Create value for customers', 'Create value for the industry', 'Create value for a better life for our employees', 'Stay committed to quality'];
 
 export const TEAM_STATS = [
-  { value: 200, suffix: '+', label: 'Team Members' },
-  { value: 50, suffix: '+', label: 'Technical Specialists' },
+  { value: 50, suffix: '+', label: 'Team Members' },
+  { value: 10, suffix: '+', label: 'Technical Specialists' },
   { value: 10, suffix: '+ yrs', label: 'Avg. Industry Experience' },
 ];
 

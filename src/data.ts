@@ -56,6 +56,14 @@ export const PRODUCTS = [
     desc: '高支细针织造，薄如第二层肌肤，V 领修饰颈线，单穿打底皆显质感。',
     crafts: [['针法', '平针细织'], ['针距', '22 针细针距'], ['纱线', '高支棉羊绒'], ['工艺', '整件缝盘 · 低温定型']],
     details: [IMG('m-cashmere.jpg'), IMG('proc-wash.jpg'), IMG('proc-machine.jpg')] },
+  { id: 'skibase', img: IMG('ski1.jpg'), name: '滑雪速干衣', en: 'Ski Base Layer', series: ['ski'],
+      desc: '15针双纱并织，甄选91%美利奴超细羊毛与弹性纤维混纺，高弹回复、防缩可机洗，结构紧密抗起球，为滑雪运动提供贴身舒适与温度调节。',
+      crafts: [['针法', '1P+1P 双纱并织'], ['针距', '15 针（15GG）'], ['纱线', 'SARMA TEC 2/60Nm，91% 美利奴超细羊毛 + 9% 弹性纤维'], ['工艺', '精纺合股 · 防缩处理 · 高弹抗起球']],
+      details: [] },
+  { id: 'skipants', img: IMG('ski2.jpg'), name: '滑雪速干裤', en: 'Ski Base Pants', series: ['ski'],
+        desc: '15针双纱并织，甄选91%美利奴超细羊毛与弹性纤维混纺，高弹回复、防缩可机洗，结构紧密抗起球，为滑雪运动提供贴身舒适与温度调节。',
+        crafts: [['针法', '1P+1P 双纱并织'], ['针距', '15 针（15GG）'], ['纱线', 'SARMA TEC 2/60Nm，91% 美利奴超细羊毛 + 9% 弹性纤维'], ['工艺', '精纺合股 · 防缩处理 · 高弹抗起球']],
+        details: [] },
 ];
 
 // Lookbook 灵感集
@@ -117,8 +125,8 @@ export const COLLABS = [
 ];
 
 export const TEAM_STATS = [
-  { value: 200, suffix: '+', label: '团队成员' },
-  { value: 50, suffix: '+', label: '专业技术人员' },
+  { value: 50, suffix: '+', label: '团队成员' },
+  { value: 10, suffix: '+', label: '专业技术人员' },
   { value: 10, suffix: '+ 年', label: '行业经验平均' },
 ];
 
