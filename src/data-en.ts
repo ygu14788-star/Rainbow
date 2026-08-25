@@ -40,7 +40,15 @@ export const PRODUCTS = [
     desc: 'High-count fine knitting, thin as a second skin; the V-neck flatters the neckline, elegant worn alone or as a base layer.',
     crafts: [['Stitch', 'Fine Stockinette'], ['Gauge', '22 Gauge Fine'], ['Yarn', 'High-Count Cotton-Cashmere'], ['Technique', 'Fully Fashioned · Low-Temperature Setting']],
     details: [IMG('m-cashmere.jpg'), IMG('proc-wash.jpg'), IMG('proc-machine.jpg')] },
-];
+    { id: 'skibase', img: IMG('ski1.png'), name: 'Ski Base Layer', en: '滑雪速干衣', series: ['ski'],
+      desc: '15-gauge double-yarn knitting, crafted with 91% Merino superfine wool and elastic fiber blend. High stretch recovery, anti-shrinkage, machine washable, tight structure anti-pilling. Provides next-to-skin comfort and temperature regulation for skiing.',
+      crafts: [['Stitch', '1P+1P Double Yarn'], ['Gauge', '15 Gauge (15GG)'], ['Yarn', 'SARMA TEC 2/60Nm, 91% Merino Superfine Wool + 9% Elastane'], ['Technique', 'Worsted 2-Ply · Anti-Shrinkage · High-Stretch Anti-Pilling']],
+      details: [] },
+    { id: 'skipants', img: IMG('ski2.png'), name: 'Ski Base Pants', en: '滑雪速干裤', series: ['ski'],
+      desc: '15-gauge double-yarn knitting, crafted with 91% Merino superfine wool and elastic fiber blend. High stretch recovery, anti-shrinkage, machine washable, tight structure anti-pilling. Provides next-to-skin comfort and temperature regulation for skiing.',
+      crafts: [['Stitch', '1P+1P Double Yarn'], ['Gauge', '15 Gauge (15GG)'], ['Yarn', 'SARMA TEC 2/60Nm, 91% Merino Superfine Wool + 9% Elastane'], ['Technique', 'Worsted 2-Ply · Anti-Shrinkage · High-Stretch Anti-Pilling']],
+      details: [] },
+  ];
 
 export const LOOKBOOK = [
   { img: IMG('lookbook.jpg'), caption: 'Between nature and light' },
