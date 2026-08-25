@@ -60,11 +60,11 @@ export const PRODUCTS = [
       desc: '15针双纱并织，甄选91%美利奴超细羊毛与弹性纤维混纺，高弹回复、防缩可机洗，结构紧密抗起球，为滑雪运动提供贴身舒适与温度调节。',
       crafts: [['针法', '1P+1P 双纱并织'], ['针距', '15 针（15GG）'], ['纱线', 'SARMA TEC 2/60Nm，91% 美利奴超细羊毛 + 9% 弹性纤维'], ['工艺', '精纺合股 · 防缩处理 · 高弹抗起球']],
       details: [] },
-  { id: 'skipants', img: IMG('ski2.jpg'), name: '滑雪速干裤', en: 'Ski Base Pants', series: ['ski'],
+      { id: 'skipants', img: IMG('ski2.jpg'), name: '滑雪速干裤', en: 'Ski Base Pants', series: ['ski'],
         desc: '15针双纱并织，甄选91%美利奴超细羊毛与弹性纤维混纺，高弹回复、防缩可机洗，结构紧密抗起球，为滑雪运动提供贴身舒适与温度调节。',
         crafts: [['针法', '1P+1P 双纱并织'], ['针距', '15 针（15GG）'], ['纱线', 'SARMA TEC 2/60Nm，91% 美利奴超细羊毛 + 9% 弹性纤维'], ['工艺', '精纺合股 · 防缩处理 · 高弹抗起球']],
         details: [] },
-];
+    ];
 
 // Lookbook 灵感集
 export const LOOKBOOK = [
