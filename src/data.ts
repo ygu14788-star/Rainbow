@@ -32,6 +32,18 @@ export const COLLECTIONS = [
 
 // 单品：series 对应上方系列 id；crafts 为针织工艺说明；details 为细节图
 export const PRODUCTS = [
+  { id: 'golfset', img: IMG('golfset.jpg'), name: '菱格纹套装', en: 'Diamond Pattern Golf Set', series: ['golf'],
+    desc: '14针单面进纱平针底组织，提花嵌花工艺呈现菱形格纹，50%羊毛50%腈纶混纺，翻领设计搭配罗纹收口，上衣半裙两件套组合。',
+    crafts: [['针法', '14G 1P 平针 + 提花嵌花'], ['针距', '14 针（14G）'], ['纱线', '50% 羊毛 50% 腈纶混纺 2070-1.6'], ['工艺', '提花嵌花 · 翻领设计 · 罗纹收口 · 套装结构']],
+    details: [] },
+  { id: 'cardigan2', img: IMG('cardigan.jpg'), name: '燕麦色闪片开衫', en: 'Oatmeal Sequin Cardigan', series: ['fashion'],
+    desc: '5针粗针距挑孔镂空组织，2P+1P2并线进纱，棉麻锦纶亮片混纺，圆领前中开扣开衫，竖向镂空纹理透气富有层次。',
+    crafts: [['针法', '2P+1P2 挑孔镂空 + 罗纹收口'], ['针距', '5 针（5G）粗针距'], ['纱线', '61%棉 30%亚麻 5%锦纶 4%亮片，1/11支与2/32支混用'], ['工艺', '挑孔镂空编织 · 亮片点缀 · 开衫结构 · 套口缝合 · 罗纹收口']],
+    details: [] },
+    { id: 'handhook', img: IMG('handhook.jpg'), name: '墨绿色手勾上衣', en: 'Hand-Crochet Mesh Top', series: ['fashion'],
+      desc: '纯手工钩编网眼组织，1/5NM人造丝纱线，方领修身收腰版型，手工缝缀亮片点缀，镂空透视设计优雅别致。',
+      crafts: [['针法', '手工钩编网眼组织'], ['针距', 'Handmade 手工制作'], ['纱线', '1/5NM 100% 人造丝（Rayon）'], ['工艺', '手工钩编 · 亮片装饰 · 方领修身 · 透视镂空']],
+      details: [] },
   { id: 'turtleneck', img: IMG('p-turtleneck.jpg'), name: '羊绒高领毛衣', en: 'Cashmere Turtleneck', series: ['fashion', 'ski'],
     desc: '甄选可追溯羊绒纱线，高领贴合颈部曲线，罗纹织法赋予自然弹性，是秋冬衣橱的恒久之选。',
     crafts: [['针法', '2x2 罗纹 + 平针主体'], ['针距', '22 针细针距'], ['纱线', '100% 可追溯羊绒'], ['工艺', '整件缝盘 · 手工套口']],
@@ -68,14 +80,6 @@ export const PRODUCTS = [
           desc: '14针单面进纱平针底组织，提花嵌花工艺呈现菱形格纹，50%羊毛50%腈纶混纺，翻领设计搭配罗纹收口，上衣半裙两件套组合。',
           crafts: [['针法', '14G 1P 平针 + 提花嵌花'], ['针距', '14 针（14G）'], ['纱线', '50% 羊毛 50% 腈纶混纺 2070-1.6'], ['工艺', '提花嵌花 · 翻领设计 · 罗纹收口 · 套装结构']],
           details: [] },
-  { id: 'handhook', img: IMG('handhook.jpg'), name: '墨绿色手勾上衣', en: 'Hand-Crochet Mesh Top', series: ['fashion'],
-            desc: '纯手工钩编网眼组织，1/5NM人造丝纱线，方领修身收腰版型，手工缝缀亮片点缀，镂空透视设计优雅别致。',
-            crafts: [['针法', '手工钩编网眼组织'], ['针距', 'Handmade 手工制作'], ['纱线', '1/5NM 100% 人造丝（Rayon）'], ['工艺', '手工钩编 · 亮片装饰 · 方领修身 · 透视镂空']],
-            details: [] },
-  { id: 'cardigan2', img: IMG('cardigan.jpg'), name: '燕麦色闪片开衫', en: 'Oatmeal Sequin Cardigan', series: ['fashion'],
-              desc: '5针粗针距挑孔镂空组织，2P+1P2并线进纱，棉麻锦纶亮片混纺，圆领前中开扣开衫，竖向镂空纹理透气富有层次。',
-              crafts: [['针法', '2P+1P2 挑孔镂空 + 罗纹收口'], ['针距', '5 针（5G）粗针距'], ['纱线', '61%棉 30%亚麻 5%锦纶 4%亮片，1/11支与2/32支混用'], ['工艺', '挑孔镂空编织 · 亮片点缀 · 开衫结构 · 套口缝合 · 罗纹收口']],
-              details: [] },
     ];
 
 // Lookbook 灵感集

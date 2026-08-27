@@ -45,7 +45,7 @@ export default function Collections({ go }: { go: Go }) {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <SectionHead en="SELECTED PIECES" zh="精选单品" enTitle="Selected Pieces" />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-            {PRODUCTS.map((p, i) => (
+          {PRODUCTS.slice(0, 6).map((p, i) => (
               <Reveal key={p.id} delay={i * 70}>
                 <button onClick={() => go('product', p.id)} className="group block w-full text-left">
                   <div className="zoom-img aspect-square bg-white">
