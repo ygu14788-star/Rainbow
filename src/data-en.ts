@@ -48,6 +48,10 @@ export const PRODUCTS = [
       desc: '15-gauge double-yarn knitting, crafted with 91% Merino superfine wool and elastic fiber blend. High stretch recovery, anti-shrinkage, machine washable, tight structure anti-pilling. Provides next-to-skin comfort and temperature regulation for skiing.',
       crafts: [['Stitch', '1P+1P Double Yarn'], ['Gauge', '15 Gauge (15GG)'], ['Yarn', 'SARMA TEC 2/60Nm, 91% Merino Superfine Wool + 9% Elastane'], ['Technique', 'Worsted 2-Ply · Anti-Shrinkage · High-Stretch Anti-Pilling']],
       details: [] },
+      { id: 'golfset', img: IMG('golfset.jpg'), name: 'Diamond Pattern Golf Set', en: '菱格纹套装', series: ['golf'],
+        desc: '14-gauge single jersey base with intarsia diamond pattern, 50% wool 50% acrylic blend, V-neck collar with ribbed trims, two-piece set.',
+        crafts: [['Stitch', '14G 1P Stockinette + Intarsia'], ['Gauge', '14 Gauge'], ['Yarn', '50% Wool 50% Acrylic 2070-1.6'], ['Technique', 'Intarsia · V-Neck Collar · Ribbed Trims · Two-Piece Set']],
+        details: [] },
   ];
 
 export const LOOKBOOK = [
