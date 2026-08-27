@@ -166,7 +166,7 @@ export function Footer({ go }: { go: (p: PageKey) => void }) {
     { title: t('系列产品', 'Collections'), items: [t('女装', 'Women'), t('男装', 'Men'), t('配饰', 'Accessories'), t('新品', 'New Arrivals')], page: 'collections' },
     { title: t('精湛工艺', 'Craftsmanship'), items: [t('我们的流程', 'Our Process'), t('材料', 'Materials'), t('品质承诺', 'Quality Promise')], page: 'craftsmanship' },
     { title: t('品牌故事', 'Our Story'), items: [t('我们的故事', 'About Us'), t('匠心工艺', 'Craft'), t('可持续性', 'Sustainability')], page: 'story' },
-    { title: t('客户服务', 'Customer Care'), items: [t('常见问题', 'FAQ'), t('物流与退换', 'Shipping & Returns'), t('联系我们', 'Contact Us')], page: 'contact' },
+    { title: t('客户服务', 'Customer Care'), items: [t('常见问题', 'FAQ'), t('联系我们', 'Contact Us')], page: 'contact' },
   ];
   return (
     <footer className="bg-[#f2eee6] border-t border-[#e4ddd1]">
@@ -196,7 +196,7 @@ export function Footer({ go }: { go: (p: PageKey) => void }) {
           ))}
         </div>
         <div className="mt-14 pt-6 border-t border-[#e4ddd1] flex flex-col md:flex-row justify-between gap-3 text-[12px] text-[#8a8177]">
-          <p>{t('© 2016-2024 Rainbow 闰博尔，保留所有权利。', '© 2016-2024 Rainbow. All rights reserved.')}</p>
+          <p>{t('© 2016-2026 Rainbow 闰博尔，保留所有权利。', '© 2016-2026 Rainbow. All rights reserved.')}</p>
           <p>{CONTACT.email}　·　{CONTACT.phone}</p>
         </div>
       </div>
