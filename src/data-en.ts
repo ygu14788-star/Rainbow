@@ -64,7 +64,7 @@ export const LOOKBOOK = [
 // ---------- Craftsmanship ----------
 export const PROCESS = [
   { img: IMG('yarn.jpg'), no: '01', title: 'Yarn Intake', desc: 'Premium yarns are carefully selected, inspected and stored — quality starts at the source.' },
-  { img: IMG('shima-22g.jpg'), no: '02', title: 'Flat Knitting', desc: 'High-precision flat knitting machines ensure stability and consistency in every piece.' },
+  { img: IMG('real-machine.jpg'), no: '02', title: 'Flat Knitting', desc: 'High-precision flat knitting machines ensure stability and consistency in every piece.' },
   { img: IMG('proc-hands.jpg'), no: '03', title: 'Linking', desc: 'Experienced linking artisans sew each seam with precision, perfecting every detail.' },
   { img: IMG('proc-wash.jpg'), no: '04', title: 'Washing & Drying', desc: 'Advanced washing and drying give the fabric a soft touch and natural drape.' },
   { img: IMG('proc-pack.jpg'), no: '05', title: 'Packing & Shipping', desc: 'Elegant packaging and quality inspection ensure products arrive safely and on time.' },

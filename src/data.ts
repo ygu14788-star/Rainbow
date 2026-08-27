@@ -18,7 +18,7 @@ export const IMG = (n: string) => `${import.meta.env.BASE_URL}images/${n}`;
 export const LOGO = IMG('logo.png');
 
 export const HERO_IMG = IMG('hero.jpg'); // Collections 首屏
-export const HERO_CRAFT = IMG('shima-22g.jpg');   // 精湛工艺首屏（岛精22针无缝横机）
+export const HERO_CRAFT = IMG('real-machine.jpg');   // 精湛工艺首屏（岛精22针无缝横机）
 export const HERO_STORY = IMG('logo-wall.jpg');   // 品牌故事首屏（企业 logo 墙）
 export const HERO_CONTACT = IMG('hero-contact.jpg'); // 联系页首屏
 
@@ -81,7 +81,7 @@ export const LOOKBOOK = [
 // ---------- Craftsmanship ----------
 export const PROCESS = [
   { img: IMG('yarn.jpg'), no: '01', title: '纱线入库', desc: '甄选优质纱线，严格检验入库，从源头保障产品品质。' },
-  { img: IMG('shima-22g.jpg'), no: '02', title: '横机编织', desc: '高精度横机编织，确保织造稳定与一致性，成就每一件高品质作品。' },
+  { img: IMG('real-machine.jpg'), no: '02', title: '横机编织', desc: '高精度横机编织，确保织造稳定与一致性，成就每一件高品质作品。' },
   { img: IMG('proc-hands.jpg'), no: '03', title: '缝盘', desc: '经验丰富的缝盘师傅，精细缝合，赋予每一件产品的细节完美。' },
   { img: IMG('proc-wash.jpg'), no: '04', title: '洗水烘干', desc: '先进洗水与烘干工艺，赋予面料柔润肤感与自然垂坠。' },
   { img: IMG('proc-pack.jpg'), no: '05', title: '包装出货', desc: '精美包装，产品质检，确保产品安全、准时送达客户手中。' },
