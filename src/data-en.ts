@@ -16,14 +16,14 @@ export const COLLECTIONS = [
 ];
 
 export const PRODUCTS = [
+  { id: 'sequin-dress', img: IMG('sequin-dress.jpg'), name: 'Hand-Crochet Sequin Dress', en: '手钩亮片裙', series: ['fashion'],
+    desc: 'Handmade crochet mesh dress in 1/5NM rayon and 1/7.5NM viscose. Spaghetti-strap, square-neck, bodycon fit with iridescent paillette sequins throughout.',
+    crafts: [['Stitch', 'Handmade Crochet Mesh'], ['Gauge', 'Handmade (No Machine Gauge)'], ['Yarn', '1/5NM 100% Rayon + 1/7.5NM 100% Viscose'], ['Technique', 'Hand Crochet · Sequin Embellishment · Spaghetti Strap · Sheer Mesh']],
+    details: [] },
   { id: 'golfset', img: IMG('golfset.jpg'), name: 'Diamond Pattern Golf Set', en: '菱格纹套装', series: ['golf'],
     desc: '14-gauge single jersey base with intarsia diamond pattern, 50% wool 50% acrylic blend, V-neck collar with ribbed trims, two-piece set.',
     crafts: [['Stitch', '14G 1P Stockinette + Intarsia'], ['Gauge', '14 Gauge'], ['Yarn', '50% Wool 50% Acrylic 2070-1.6'], ['Technique', 'Intarsia · V-Neck Collar · Ribbed Trims · Two-Piece Set']],
     details: [] },
-  { id: 'handhook', img: IMG('handhook.jpg'), name: 'Hand-Crochet Mesh Top', en: '墨绿色手勾上衣', series: ['fashion'],
-      desc: 'Handmade crochet open-work mesh in 1/5NM rayon yarn. Square-neck, fitted waist silhouette with hand-sewn sequins and sheer镂空 design.',
-      crafts: [['Stitch', 'Handmade Crochet / Open-work Mesh'], ['Gauge', 'Handmade (No Machine Gauge)'], ['Yarn', '1/5NM 100% Rayon'], ['Technique', 'Hand Crochet · Sequin Embellishment · Square Neck · Sheer Mesh']],
-      details: [] },
   { id: 'cardigan2', img: IMG('cardigan.jpg'), name: 'Oatmeal Sequin Cardigan', en: '燕麦色闪片开衫', series: ['fashion'],
         desc: '5-gauge open-work pointelle knit with 2P+1P2 yarn feeding. Cotton-linen-nylon-sequin blend in vertical镂空 stripes. Round-neck button-front cardigan.',
         crafts: [['Stitch', '2P+1P2 Pointelle Open-work + Rib Trim'], ['Gauge', '5 Gauge Coarse'], ['Yarn', '61% Cotton 30% Linen 5% Nylon 4% Sequin, 1/11 & 2/32 Mixed'], ['Technique', 'Pointelle Knit · Sequin Accent · Cardigan Structure · Linking · Ribbed Hem']],
@@ -60,7 +60,10 @@ export const PRODUCTS = [
       desc: '15-gauge double-yarn knitting, crafted with 91% Merino superfine wool and elastic fiber blend. High stretch recovery, anti-shrinkage, machine washable, tight structure anti-pilling. Provides next-to-skin comfort and temperature regulation for skiing.',
       crafts: [['Stitch', '1P+1P Double Yarn'], ['Gauge', '15 Gauge (15GG)'], ['Yarn', 'SARMA TEC 2/60Nm, 91% Merino Superfine Wool + 9% Elastane'], ['Technique', 'Worsted 2-Ply · Anti-Shrinkage · High-Stretch Anti-Pilling']],
       details: [] },
-      
+      { id: 'handhook', img: IMG('handhook.jpg'), name: 'Hand-Crochet Mesh Top', en: '墨绿色手勾上衣', series: ['fashion'],
+        desc: 'Handmade crochet open-work mesh in 1/5NM rayon yarn. Square-neck, fitted waist silhouette with hand-sewn sequins and sheer镂空 design.',
+        crafts: [['Stitch', 'Handmade Crochet / Open-work Mesh'], ['Gauge', 'Handmade (No Machine Gauge)'], ['Yarn', '1/5NM 100% Rayon'], ['Technique', 'Hand Crochet · Sequin Embellishment · Square Neck · Sheer Mesh']],
+        details: [] },
   ];
 
 export const LOOKBOOK = [
