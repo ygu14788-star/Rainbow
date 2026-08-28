@@ -98,20 +98,6 @@ export function ProductDetail({ id, go }: { id: string; go: Go }) {
           </button>
         </Reveal>
       </div>
-
-      {/* 细节图 */}
-      <div className="mt-20">
-        <SectionHead en="DETAILS" zh="细节之美" enTitle="The Beauty of Details" />
-        <div className="grid grid-cols-3 gap-5">
-          {p.details.map((d, i) => (
-            <Reveal key={d} delay={i * 90}>
-              <div className="zoom-img aspect-square bg-white">
-                <img src={d} alt={`${p.name} ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
