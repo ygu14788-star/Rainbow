@@ -32,6 +32,10 @@ export const COLLECTIONS = [
 
 // 单品：series 对应上方系列 id；crafts 为针织工艺说明；details 为细节图
 export const PRODUCTS = [
+  { id: 'golfjacket', img: IMG('golfjacket.jpg'), name: '18针羊毛PBT混纺平针连帽拉链高尔夫外套', en: '18G Wool PBT Blend Hooded Zip Golf Jacket', series: ['golf', 'fashion'],
+    desc: '18针细针距羊毛PBT混纺，17.5微米超细羊毛带来柔软亲肤触感。连帽拉链结构搭配功能性口袋，适合高尔夫运动及日常休闲穿搭。',
+    crafts: [['针法', '3P 四平编织 + 罗纹收口'], ['针距', '18G（18针）'], ['纱线', '85% 羊毛（17.5微米）15% PBT'], ['工艺', '超细羊毛PBT混纺 · 连帽拉链结构 · 功能性口袋 · 罗纹收口']],
+    details: [] },
   { id: 'sequin-dress', img: IMG('sequin-dress.jpg'), name: '手钩亮片裙', en: 'Hand-Crochet Sequin Dress', series: ['fashion'],
     desc: '纯手工钩编网眼组织，1/5NM人造丝与1/7.5NM粘胶纤维混用，细肩带方领修身包臀款，全身幻彩扇形亮片点缀，镂空透视优雅别致。',
     crafts: [['针法', '手工钩编网眼组织'], ['针距', 'Handmade 手工制作'], ['纱线', '1/5NM 100% Rayon + 1/7.5NM 100% Viscose'], ['工艺', '手工钩编 · 亮片装饰 · 细肩带修身 · 透视效果']],

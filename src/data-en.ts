@@ -16,6 +16,10 @@ export const COLLECTIONS = [
 ];
 
 export const PRODUCTS = [
+  { id: 'golfjacket', img: IMG('golfjacket.jpg'), name: '18G Wool PBT Blend Hooded Zip Golf Jacket', en: '18针羊毛PBT混纺平针连帽拉链高尔夫外套', series: ['golf', 'fashion'],
+    desc: '18-gauge fine wool PBT blend with 17.5 micron superfine wool for a soft, skin-friendly touch. Hooded zip structure with functional pockets, perfect for golf and casual wear.',
+    crafts: [['Stitch', '3P Plain Knit + Rib Trim'], ['Gauge', '18 Gauge'], ['Yarn', '85% Wool (17.5μm) 15% PBT'], ['Technique', 'Wool-PBT Blend · Hooded Zip · Functional Pockets · Ribbed Cuffs']],
+    details: [] },
   { id: 'sequin-dress', img: IMG('sequin-dress.jpg'), name: 'Hand-Crochet Sequin Dress', en: '手钩亮片裙', series: ['fashion'],
     desc: 'Handmade crochet mesh dress in 1/5NM rayon and 1/7.5NM viscose. Spaghetti-strap, square-neck, bodycon fit with iridescent paillette sequins throughout.',
     crafts: [['Stitch', 'Handmade Crochet Mesh'], ['Gauge', 'Handmade (No Machine Gauge)'], ['Yarn', '1/5NM 100% Rayon + 1/7.5NM 100% Viscose'], ['Technique', 'Hand Crochet · Sequin Embellishment · Spaghetti Strap · Sheer Mesh']],
