@@ -48,7 +48,11 @@ export const PRODUCTS = [
       desc: '14针单面进纱平针底组织，提花嵌花工艺呈现菱形格纹，50%羊毛50%腈纶混纺，翻领设计搭配罗纹收口，上衣半裙两件套组合。',
       crafts: [['针法', '14G 1P 平针 + 提花嵌花'], ['针距', '14 针（14G）'], ['纱线', '50% 羊毛 50% 腈纶混纺 2070-1.6'], ['工艺', '提花嵌花 · 翻领设计 · 罗纹收口 · 套装结构']],
       details: [] },
-  { id: 'turtleneck', img: IMG('p-turtleneck.jpg'), name: '羊绒高领毛衣', en: 'Cashmere Turtleneck', series: ['fashion', 'ski'],
+      { id: 'coldchange', img: IMG('coldchange.jpg'), name: '16针超细美丽奴羊毛冷感变色羽绒服', en: '16G Super-fine Merino Cold-Sensitive Color-Changing Down Jacket', series: ['ski'],
+        desc: '16针超细美利奴羊毛结合冷感变色纱线，低温环境下呈现独特色彩变化。蓬松绗缝结构搭配拉链开襟，轻盈保暖。',
+        crafts: [['针法', '1P 平针编织 + 罗纹收口'], ['针距', '16G（16针）'], ['纱线', '100% 超细美利奴羊毛 / 100% 聚酯纤维冷感变色纱'], ['工艺', '超细美利奴羊毛编织 · 冷感低温变色 · 绗缝填充保暖 · 拉链开襟']],
+        details: [] },
+      { id: 'turtleneck', img: IMG('p-turtleneck.jpg'), name: '羊绒高领毛衣', en: 'Cashmere Turtleneck', series: ['fashion', 'ski'],
     desc: '甄选可追溯羊绒纱线，高领贴合颈部曲线，罗纹织法赋予自然弹性，是秋冬衣橱的恒久之选。',
     crafts: [['针法', '2x2 罗纹 + 平针主体'], ['针距', '22 针细针距'], ['纱线', '100% 可追溯羊绒'], ['工艺', '整件缝盘 · 手工套口']],
     details: [IMG('m-cashmere.jpg'), IMG('proc-hands.jpg'), IMG('proc-wash.jpg')] },
@@ -84,6 +88,14 @@ export const PRODUCTS = [
             desc: '纯手工钩编网眼组织，1/5NM人造丝纱线，方领修身收腰版型，手工缝缀亮片点缀，镂空透视设计优雅别致。',
             crafts: [['针法', '手工钩编网眼组织'], ['针距', 'Handmade 手工制作'], ['纱线', '1/5NM 100% 人造丝（Rayon）'], ['工艺', '手工钩编 · 亮片装饰 · 方领修身 · 透视镂空']],
             details: [] },
+  { id: 'jumpsuit', img: IMG('jumpsuit.jpg'), name: '15针无缝羊毛再生尼龙平针迷彩拼接拉链连体衣', en: '15G Seamless Wool Recycled Nylon Camo Jumpsuit', series: ['ski'],
+              desc: '15针无缝羊毛再生尼龙混纺，多组织迷彩拼接设计。拉链翻领连体剪裁，558g贴身保暖，适合滑雪与户外运动。',
+              crafts: [['针法', '无缝提花 + 罗纹 + 多组织迷彩拼接'], ['针距', '15L（15针）'], ['纱线', '65% 羊毛 35% 再生尼龙'], ['工艺', '羊毛再生尼龙混纺 · 迷彩多组织拼接 · 拉链翻领连体 · 贴身剪裁']],
+              details: [] },
+  { id: 'tiedye', img: IMG('tie-dye.jpg'), name: '15针无缝一体成型羊毛再生尼龙提花扎染高领紧身衣', en: '15G Seamless Wool Recycled Nylon Tie-Dye High Neck Pullover', series: ['ski', 'fashion'],
+              desc: '15针无缝一体成型羊毛再生尼龙混纺，手工扎染工艺呈现独特黑白晕染效果。高领贴身剪裁，轻盈保暖，单穿内搭皆宜。',
+              crafts: [['针法', '平针编织 + 罗纹高领/袖口'], ['针距', '15L（15针）'], ['纱线', '100% 羊毛 100% 再生尼龙（双纱 2/48, 1/38）'], ['工艺', '羊毛再生尼龙混纺 · 手工扎染 · 高领贴身 · 罗纹收口']],
+              details: [] },
     ];
 
 // Lookbook 灵感集

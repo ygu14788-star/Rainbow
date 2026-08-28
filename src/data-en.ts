@@ -36,7 +36,11 @@ export const PRODUCTS = [
     desc: 'Made from traceable cashmere yarn, the turtleneck hugs the neckline while ribbed knitting gives natural stretch — a timeless choice for autumn and winter.',
     crafts: [['Stitch', '2x2 Rib + Stockinette Body'], ['Gauge', '22 Gauge Fine'], ['Yarn', '100% Traceable Cashmere'], ['Technique', 'Fully Fashioned · Hand Linking']],
     details: [IMG('m-cashmere.jpg'), IMG('proc-hands.jpg'), IMG('proc-wash.jpg')] },
-  { id: 'zip', img: IMG('p-zip.jpg'), name: 'Merino Half-Zip', en: '美利奴半拉链毛衣', series: ['golf', 'trail'],
+    { id: 'coldchange', img: IMG('coldchange.jpg'), name: '16G Super-fine Merino Cold-Sensitive Color-Changing Down Jacket', en: '16针超细美丽奴羊毛冷感变色羽绒服', series: ['ski'],
+      desc: '16-gauge superfine Merino wool combined with cold-sensitive color-changing yarn, presenting unique color shifts in low temperatures. Quilted structure with zip front, lightweight and warm.',
+      crafts: [['Stitch', '1P Stockinette + Rib Trim'], ['Gauge', '16 Gauge'], ['Yarn', '100% Super-fine Merino Wool / 100% Polyester Cold-Sensitive Yarn'], ['Technique', 'Superfine Merino Knit · Cold-Sensitive Color Change · Quilted Padding · Zip Front']],
+      details: [] },
+    { id: 'zip', img: IMG('p-zip.jpg'), name: 'Merino Half-Zip', en: '美利奴半拉链毛衣', series: ['golf', 'trail'],
     desc: 'Knitted from extra-fine merino wool, the half-zip design regulates temperature during exercise, with ergonomic underarm cutting for free movement.',
     crafts: [['Stitch', 'Stockinette + Ribbed Cuffs'], ['Gauge', '22 Gauge Fine'], ['Yarn', '19.5μm Extra-Fine Merino'], ['Technique', 'Hand-Finished Zip Placket']],
     details: [IMG('m-wool.jpg'), IMG('proc-machine.jpg'), IMG('proc-wash.jpg')] },
@@ -68,6 +72,14 @@ export const PRODUCTS = [
         desc: 'Handmade crochet open-work mesh in 1/5NM rayon yarn. Square-neck, fitted waist silhouette with hand-sewn sequins and sheer镂空 design.',
         crafts: [['Stitch', 'Handmade Crochet / Open-work Mesh'], ['Gauge', 'Handmade (No Machine Gauge)'], ['Yarn', '1/5NM 100% Rayon'], ['Technique', 'Hand Crochet · Sequin Embellishment · Square Neck · Sheer Mesh']],
         details: [] },
+        { id: 'jumpsuit', img: IMG('jumpsuit.jpg'), name: '15G Seamless Wool Recycled Nylon Camo Jumpsuit', en: '15针无缝羊毛再生尼龙平针迷彩拼接拉链连体衣', series: ['ski'],
+          desc: '15-gauge seamless wool-recycled nylon blend with multi-stitch camo patchwork. Zip mock-neck jumpsuit cut, 558g body-hugging warmth for skiing and outdoor sports.',
+          crafts: [['Stitch', 'Seamless Jacquard + Rib + Multi-Stitch Camo Patchwork'], ['Gauge', '15 Gauge'], ['Yarn', '65% Wool 35% Recycled Nylon'], ['Technique', 'Wool-Nylon Blend · Camo Multi-Stitch Patchwork · Zip Mock-Neck Jumpsuit · Body-Hugging Cut']],
+          details: [] },
+        { id: 'tiedye', img: IMG('tie-dye.jpg'), name: '15G Seamless Wool Recycled Nylon Tie-Dye High Neck Pullover', en: '15针无缝一体成型羊毛再生尼龙提花扎染高领紧身衣', series: ['ski', 'fashion'],
+          desc: '15-gauge seamless wholegarment wool-recycled nylon blend with hand tie-dye technique creating unique black-and-white blur effects. High-neck body-hugging cut, lightweight warmth for layering or solo wear.',
+          crafts: [['Stitch', 'Stockinette + Ribbed High Neck/Cuffs'], ['Gauge', '15 Gauge'], ['Yarn', '100% Wool 100% Recycled Nylon (2/48 & 1/38 Double Yarn)'], ['Technique', 'Wool-Nylon Blend · Hand Tie-Dye · High-Neck Body Fit · Ribbed Trim']],
+          details: [] },
   ];
 
 export const LOOKBOOK = [
