@@ -32,9 +32,9 @@ export const COLLECTIONS = [
 
 // 单品：series 对应上方系列 id；crafts 为针织工艺说明；details 为细节图
 export const PRODUCTS = [
-  { id: 'golfjacket', img: IMG('golfjacket.jpg'), name: '18针羊毛PBT混纺平针连帽拉链高尔夫外套', en: '18G Wool PBT Blend Hooded Zip Golf Jacket', series: ['golf', 'fashion'],
-    desc: '18针细针距羊毛PBT混纺，17.5微米超细羊毛带来柔软亲肤触感。连帽拉链结构搭配功能性口袋，适合高尔夫运动及日常休闲穿搭。',
-    crafts: [['针法', '3P 四平编织 + 罗纹收口'], ['针距', '18G（18针）'], ['纱线', '85% 羊毛（17.5微米）15% PBT'], ['工艺', '超细羊毛PBT混纺 · 连帽拉链结构 · 功能性口袋 · 罗纹收口']],
+  { id: 'seamless', img: IMG('seamless.jpg'), name: '22针全成型汉麻莱赛尔平针无缝运动背心', en: '22G Macel Hemp Lyocell Wholegarment Seamless Sports Bra', series: ['fashion', 'trail'],
+    desc: '22针极细针距汉麻莱赛尔混纺氨纶，全成型无缝一体织造。背心式U领连体剪裁，47g超轻贴身，透气亲肤，适合运动以及春夏内搭或单穿。',
+    crafts: [['针法', '1P 全成型无缝一体成型'], ['针距', '22L（22针）'], ['纱线', '98% 汉麻莱赛尔（macel）2% 氨纶'], ['工艺', '汉麻莱赛尔混纺 · 全成型无缝一体织造 · 背心式连体 · U领贴身']],
     details: [] },
   { id: 'sequin-dress', img: IMG('sequin-dress.jpg'), name: '手钩亮片裙', en: 'Hand-Crochet Sequin Dress', series: ['fashion'],
     desc: '纯手工钩编网眼组织，1/5NM人造丝与1/7.5NM粘胶纤维混用，细肩带方领修身包臀款，全身幻彩扇形亮片点缀，镂空透视优雅别致。',
@@ -100,10 +100,10 @@ export const PRODUCTS = [
                 desc: '22针极细针距全羊毛，全成型无缝一体织造。袖子与后背采用不同针型组织变化，110g轻薄透气，圆领修身剪裁，适合运动以及春夏日常穿搭。',
                 crafts: [['针法', '1P 平针 + 袖子/后背多组织变化 + 全成型无缝一体成型'], ['针距', '22L（22针）'], ['纱线', '100% 超细美利奴羊毛（2/60）'], ['工艺', '全羊毛22L全成型无缝 · 多组织针型变化 · 圆领修身 · 轻薄透气']],
                 details: [] },
-              { id: 'seamless', img: IMG('seamless.jpg'), name: '22针全成型汉麻莱赛尔平针无缝运动背心', en: '22G Macel Hemp Lyocell Wholegarment Seamless Sports Bra', series: ['fashion', 'trail'],
-                desc: '22针极细针距汉麻莱赛尔混纺氨纶，全成型无缝一体织造。背心式U领连体剪裁，47g超轻贴身，透气亲肤，适合运动以及春夏内搭或单穿。',
-                crafts: [['针法', '1P 全成型无缝一体成型'], ['针距', '22L（22针）'], ['纱线', '98% 汉麻莱赛尔（macel）2% 氨纶'], ['工艺', '汉麻莱赛尔混纺 · 全成型无缝一体织造 · 背心式连体 · U领贴身']],
-                details: [] },
+                { id: 'golfjacket', img: IMG('golfjacket.jpg'), name: '18针羊毛PBT混纺平针连帽拉链高尔夫外套', en: '18G Wool PBT Blend Hooded Zip Golf Jacket', series: ['golf', 'fashion'],
+                  desc: '18针细针距羊毛PBT混纺，17.5微米超细羊毛带来柔软亲肤触感。连帽拉链结构搭配功能性口袋，适合高尔夫运动及日常休闲穿搭。',
+                  crafts: [['针法', '3P 四平编织 + 罗纹收口'], ['针距', '18G（18针）'], ['纱线', '85% 羊毛（17.5微米）15% PBT'], ['工艺', '超细羊毛PBT混纺 · 连帽拉链结构 · 功能性口袋 · 罗纹收口']],
+                  details: [] },
               { id: 'vent', img: IMG('vent.jpg'), name: '22针全成型粘胶聚乙烯平针腋下挑孔透气超轻越野跑无缝T恤', en: '22G Viscose Polyethylene Underarm Vent Trail Seamless Ultra Light-Weight Tee', series: ['trail'],
                 desc: '22针极细针距粘胶聚乙烯混纺，全成型无缝一体织造。腋下挑孔镂空透气结构，专为越野跑设计，增强散热排汗。61g轻薄半透明，修身短袖，亲肤凉感，适合高强度户外运动。',
                 crafts: [['针法', '1P 平针编织 + 腋下挑孔镂空透气 + 全成型无缝一体成型'], ['针距', '22L（22针）'], ['纱线', '50% 粘胶 50% 聚乙烯'], ['工艺', '粘胶聚乙烯混纺 · 全成型无缝一体织造 · 腋下挑孔透气 · 轻薄半透明 · 越野跑功能剪裁']],
