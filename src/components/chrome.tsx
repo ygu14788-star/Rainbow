@@ -159,14 +159,42 @@ export function Nav({ page, go }: { page: PageKey; go: (p: PageKey) => void }) {
 }
 
 /* ---------- 页脚 ---------- */
-export function Footer({ go }: { go: (p: PageKey) => void }) {
+export function Footer({ go }: { go: (p: PageKey, param?: string) => void }) {
   const { t, lang } = useLang();
   const { CONTACT } = useData();
-  const cols: { title: string; items: string[]; page?: PageKey }[] = [
-    { title: t('系列产品', 'Collections'), items: [t('女装', 'Women'), t('男装', 'Men'), t('配饰', 'Accessories'), t('新品', 'New Arrivals')], page: 'collections' },
-    { title: t('精湛工艺', 'Craftsmanship'), items: [t('我们的流程', 'Our Process'), t('材料', 'Materials'), t('品质承诺', 'Quality Promise')], page: 'craftsmanship' },
-    { title: t('品牌故事', 'Our Story'), items: [t('我们的故事', 'About Us'), t('匠心工艺', 'Craft'), t('可持续性', 'Sustainability')], page: 'story' },
-    { title: t('客户服务', 'Customer Care'), items: [t('常见问题', 'FAQ'), t('联系我们', 'Contact Us')], page: 'contact' },
+  const cols = [
+    { 
+      title: t('系列产品', 'Collections'), 
+      items: [
+        { label: t('时装系列', 'Fashion'), action: () => go('collections', 'fashion') },
+        { label: t('高尔夫系列', 'Golf'), action: () => go('collections', 'golf') },
+        { label: t('滑雪系列', 'Ski'), action: () => go('collections', 'ski') },
+        { label: t('越野跑系列', 'Trail Running'), action: () => go('collections', 'trail') },
+      ]
+    },
+    { 
+      title: t('精湛工艺', 'Craftsmanship'), 
+      items: [
+        { label: t('我们的流程', 'Our Process'), action: () => go('craftsmanship') },
+        { label: t('材料', 'Materials'), action: () => go('craftsmanship') },
+        { label: t('品质承诺', 'Quality Promise'), action: () => go('craftsmanship') },
+      ]
+    },
+    { 
+      title: t('品牌故事', 'Our Story'), 
+      items: [
+        { label: t('我们的故事', 'About Us'), action: () => go('story') },
+        { label: t('匠心工艺', 'Craft'), action: () => go('story') },
+        { label: t('可持续性', 'Sustainability'), action: () => go('sustainability') },
+      ]
+    },
+    { 
+      title: t('客户服务', 'Customer Care'), 
+      items: [
+        { label: t('常见问题', 'FAQ'), action: () => go('contact') },
+        { label: t('联系我们', 'Contact Us'), action: () => go('contact') },
+      ]
+    },
   ];
   return (
     <footer className="bg-[#f2eee6] border-t border-[#e4ddd1]">
@@ -186,11 +214,11 @@ export function Footer({ go }: { go: (p: PageKey) => void }) {
             <div key={c.title}>
               <p className="text-[13px] font-medium tracking-widest mb-4">{c.title}</p>
               <ul className="space-y-2.5">
-                {c.items.map(i => (
-                  <li key={i}>
-                    <button onClick={() => c.page && go(c.page)} className="text-[13px] text-[#8a8177] hover:text-[#2a251f] transition-colors">{i}</button>
-                  </li>
-                ))}
+              {c.items.map(i => (
+                <li key={i.label}>
+                  <button onClick={i.action} className="text-[13px] text-[#8a8177] hover:text-[#2a251f] transition-colors">{i.label}</button>
+                </li>
+              ))}
               </ul>
             </div>
           ))}
