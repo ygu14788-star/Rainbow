@@ -108,7 +108,7 @@ export const PRODUCTS = [
         desc: '5-gauge coarse wool and polyester sequin yarn blend, 462g substantial texture. 1P+3P double-bed stitch creates rich texture, all-over sequin embellishment sparkles. Bodycon pencil cut, a statement piece for parties or daily wear.',
         crafts: [['Stitch', '1P+3P Double-Bed Stockinette + Ribbed Waistband'], ['Gauge', '5 Gauge'], ['Yarn', '100% Wool / 100% Polyester (Sequin Yarn)'], ['Technique', 'Wool-Polyester Blend · Sequin Accent · Double-Bed Texture · Bodycon Pencil']],
         details: [] },
-      { id: 'steel-rib', img: IMG('steel-rib.jpg'), name: '14G Viscose Steel Yarn Ribbed High Neck Slim Long Sleeve Top', en: '14针粘胶金属丝罗纹高领修身长袖上衣', en: '14针粘胶金属丝罗纹高领修身长袖上衣', series: ['fashion'],
+      { id: 'steel-rib', img: IMG('steel-rib.jpg'), name: '14G Viscose Steel Yarn Ribbed High Neck Slim Long Sleeve Top', en: '14针粘胶金属丝罗纹高领修身长袖上衣', series: ['fashion'],
         desc: '14-gauge fine viscose-steel yarn blend, 61g lightweight with sheen. Vertical rib texture slimming effect, high neck elegant design, long sleeve body-hugging cut. Perfect for spring-summer layering or solo wear.',
         crafts: [['Stitch', '1P Rib Knit + High Neck Rib'], ['Gauge', '14 Gauge'], ['Yarn', '67% Viscose 33% Steel Yarn'], ['Technique', 'Viscose-Steel Blend · Vertical Rib · High Neck Slim Fit · Lustrous Fabric']],
         details: [] },
