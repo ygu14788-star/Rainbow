@@ -32,7 +32,7 @@ export const COLLECTIONS = [
 
 // 单品：series 对应上方系列 id；crafts 为针织工艺说明；details 为细节图
 export const PRODUCTS = [
-  { id: 'seamless', img: IMG('seamless.jpg'), name: '22针全成型汉麻莱赛尔平针无缝运动背心', en: '22G Macel Hemp Lyocell Wholegarment Seamless Sports Bra', series: ['fashion', 'trail'],
+  { id: 'seamless', img: IMG('seamless.jpg'), name: '22针全成型汉麻莱赛尔平针无缝运动背心', en: '22G Macel Hemp Lyocell Wholegarment Seamless Sports Bra', series: ['trail'],
     desc: '22针极细针距汉麻莱赛尔混纺氨纶，全成型无缝一体织造。背心式U领连体剪裁，47g超轻贴身，透气亲肤，适合运动以及春夏内搭或单穿。',
     crafts: [['针法', '1P 全成型无缝一体成型'], ['针距', '22L（22针）'], ['纱线', '98% 汉麻莱赛尔（macel）2% 氨纶'], ['工艺', '汉麻莱赛尔混纺 · 全成型无缝一体织造 · 背心式连体 · U领贴身']],
     details: [] },

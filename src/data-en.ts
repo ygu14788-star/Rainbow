@@ -16,7 +16,7 @@ export const COLLECTIONS = [
 ];
 
 export const PRODUCTS = [
-  { id: 'seamless', img: IMG('seamless.jpg'), name: '22G Macel Hemp Lyocell Wholegarment Seamless Sports Bra', en: '22针全成型汉麻莱赛尔平针无缝运动背心', series: ['fashion', 'trail'],
+  { id: 'seamless', img: IMG('seamless.jpg'), name: '22G Macel Hemp Lyocell Wholegarment Seamless Sports Bra', en: '22针全成型汉麻莱赛尔平针无缝运动背心', series: ['trail'],
     desc: '22-gauge ultra-fine macel hemp lyocell with spandex, wholegarment seamless knit. Tank-style U-neck bodysuit cut, 47g ultra-light body-hugging fit, breathable and skin-friendly, for sports and spring-summer layering or solo wear.',
     crafts: [['Stitch', '1P Wholegarment Seamless'], ['Gauge', '22 Gauge'], ['Yarn', '98% Macel Hemp Lyocell 2% Spandex'], ['Technique', 'Hemp-Lyocell Blend · Wholegarment Seamless · Tank Bodysuit · U-Neck Body Fit']],
     details: [] },
