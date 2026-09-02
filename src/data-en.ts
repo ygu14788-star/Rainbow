@@ -160,6 +160,14 @@ export const PRODUCTS = [
         desc: '14-gauge fine silk-cotton blend (2/48NM), 455g heavyweight texture. 2P plain knit tight and structured, neckline, armhole and pocket edges with raw edge fringe detail. Crew neck sleeveless slim long cut, side patch pockets for utility and style. Perfect for autumn-winter daily commute.',
         crafts: [['Stitch', '2P Double Plain Knit + Fringe Trim Neckline/Armhole/Pockets'], ['Gauge', '14 Gauge'], ['Yarn', '55% Silk 45% Cotton (2/48NM)'], ['Technique', 'Silk-Cotton Blend · Double Plain Knit · Fringe Trim · Crew Neck Sleeveless · Side Patch Pockets']],
         details: [] },
+        { id: 'fair-isle', img: IMG('fair-isle.jpg'), name: '8G Alpaca Wool Nylon Fair Isle Jacquard Crew Neck Sweater', en: '8针羊驼毛羊毛尼龙费尔岛提花圆领毛衣', series: ['fashion'],
+          desc: '8-gauge coarse alpaca-wool-nylon-spandex blend, 289g fluffy and warm. Classic Fair Isle jacquard technique with brown, pink and yellow geometric zigzag patterns from shoulder to neckline. Crew neck long sleeve relaxed cut, a vintage statement piece for autumn-winter.',
+          crafts: [['Stitch', '1P Stockinette + Fair Isle Jacquard + Ribbed Crew Neck/Cuffs/Hem'], ['Gauge', '8 Gauge'], ['Yarn', '32% Alpaca 32% Wool 30% Nylon 6% Spandex (1/13NM)'], ['Technique', 'Alpaca-Wool Blend · Fair Isle Jacquard · Geometric Zigzag · Crew Neck Long Sleeve']],
+          details: [] },
+        { id: 'distressed', img: IMG('distressed.jpg'), name: '12G Wool Nylon Distressed Cutout Geometric Plain Knit Slim Long Sleeve Top', en: '12针羊毛尼龙破洞镂空几何平针修身长袖上衣', series: ['fashion'],
+          desc: '12-gauge fine wool-nylon blend, 135g lightweight and breathable. Large-scale geometric distressed cutout design on the front, raw edge treatment on sleeves for a casual deconstructed look. Crew neck slim long sleeve cut, a standout piece for spring-summer layering or solo wear.',
+          crafts: [['Stitch', 'Stockinette + Geometric Distressed Cutout + Raw Edge Treatment'], ['Gauge', '12 Gauge'], ['Yarn', '80% Wool 20% Nylon (1/16NM, 1.6x)'], ['Technique', 'Wool-Nylon Blend · Geometric Distressed Cutout · Raw Edge Deconstructed · Slim Long Sleeve']],
+          details: [] },
   ];
 
 export const LOOKBOOK = [
