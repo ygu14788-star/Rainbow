@@ -19,7 +19,7 @@ export default function Collections({ go }: { go: Go }) {
       {/* 产品系列 —— 点击进入对应系列页 */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
         <SectionHead en="OUR COLLECTIONS" zh="产品系列" enTitle="Our Collections" />
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-5">
           {COLLECTIONS.map((c, i) => (
             <Reveal key={c.id} delay={i * 100}>
               <button onClick={() => go('collections', c.id)} className="group block w-full text-left bg-white">
