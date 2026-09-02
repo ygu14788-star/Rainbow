@@ -28,7 +28,7 @@ export const COLLECTIONS = [
   { id: 'golf', img: IMG('col-golf.jpg'), zh: '高尔夫系列', en: 'Golf', desc: '选用舒适高弹面料，专为高尔夫运动场景而生的精致针织。' },
   { id: 'ski', img: IMG('col-ski.jpg'), zh: '滑雪系列', en: 'Ski', desc: '注重保暖、专业贴心，灵活应对严寒的专业防寒装备。' },
   { id: 'trail', img: IMG('col-trail.jpg'), zh: '越野跑系列', en: 'Trail Running', desc: '有效排汗、随行而动，为越野跑提供安全舒适体验。' },
-  { id: 'accessories', img: IMG('col-accessories.jpg'), zh: '配饰系列', en: 'Accessories', desc: '精选针织配饰，从围巾帽饰到精致包袋，点缀细节之美。' },
+  { id: 'accessories', img: IMG('col-accessories.jpg'), zh: '配饰系列', en: 'Accessories', desc: '精选针织配饰，从围巾帽饰到精致手套，点缀细节之美。' },
 ];
 
 // 单品：series 对应上方系列 id；crafts 为针织工艺说明；details 为细节图
