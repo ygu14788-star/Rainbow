@@ -13,6 +13,7 @@ export const COLLECTIONS = [
   { id: 'golf', img: IMG('col-golf.jpg'), zh: 'Golf', en: '高尔夫系列', desc: 'Comfortable, stretchy fabrics crafted for the golf course.' },
   { id: 'ski', img: IMG('col-ski.jpg'), zh: 'Ski', en: '滑雪系列', desc: 'Warm, professional cold-weather gear that adapts to the severe cold.' },
   { id: 'trail', img: IMG('col-trail.jpg'), zh: 'Trail Running', en: '越野跑系列', desc: 'Moisture-wicking knitwear that moves with you on the trail.' },
+  { id: 'accessories', img: IMG('col-accessories.jpg'), zh: '配饰系列', en: 'Accessories', desc: '精选针织配饰，从围巾帽饰到精致手套，点缀细节之美。' },
 ];
 
 export const PRODUCTS = [
