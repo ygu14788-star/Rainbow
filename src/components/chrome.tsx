@@ -170,6 +170,7 @@ export function Footer({ go }: { go: (p: PageKey, param?: string) => void }) {
         { label: t('高尔夫系列', 'Golf'), action: () => go('collections', 'golf') },
         { label: t('滑雪系列', 'Ski'), action: () => go('collections', 'ski') },
         { label: t('越野跑系列', 'Trail Running'), action: () => go('collections', 'trail') },
+        { label: t('配饰', 'Accessories'), action: () => go('collections', 'accessories') }
       ]
     },
     { 
