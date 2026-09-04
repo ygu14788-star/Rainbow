@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Reveal, Hero, SectionHead } from '../components/chrome';
 import { useLang, useData } from '../i18n';
 
-type Tech = { img: string; title: string; desc: string; detail: string };
+type Tech = { img: string; title: string; enTitle: string; desc: string; enDesc: string; detail: string; enDetail: string };
 
 /* 工艺详情弹窗 */
-function TechModal({ tech, onClose, closeLabel }: { tech: Tech | null; onClose: () => void; closeLabel: string }) {
+function TechModal({ tech, onClose, closeLabel, lang }: { tech: Tech | null; onClose: () => void; closeLabel: string; lang: string }) {
   if (!tech) return null;
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-6" onClick={onClose}>
@@ -13,13 +13,13 @@ function TechModal({ tech, onClose, closeLabel }: { tech: Tech | null; onClose: 
       <div className="relative bg-[#f8f5f0] max-w-3xl w-full grid md:grid-cols-2 max-h-[86vh] overflow-hidden"
         onClick={e => e.stopPropagation()}>
         <div className="hidden md:block">
-          <img src={tech.img} alt={tech.title} className="w-full h-full object-cover" />
+          <img src={tech.img} alt={lang === 'en' ? tech.enTitle : tech.title} className="w-full h-full object-cover" />
         </div>
         <div className="p-8 md:p-10 overflow-y-auto">
           <p className="text-[11px] tracking-[0.35em] text-[#a8895b]">CRAFTSMANSHIP</p>
-          <h3 className="font-serif-d text-3xl font-medium mt-2">{tech.title}</h3>
+          <h3 className="font-serif-d text-3xl font-medium mt-2">{lang === 'en' ? tech.enTitle : tech.title}</h3>
           <div className="w-8 h-px bg-[#a8895b] my-5" />
-          <p className="text-[14px] leading-[2] text-[#6b6257]">{tech.detail}</p>
+          <p className="text-[14px] leading-[2] text-[#6b6257]">{lang === 'en' ? tech.enDetail : tech.detail}</p>
           <button onClick={onClose}
             className="mt-8 border border-[#2a251f] px-8 py-2.5 text-[12px] tracking-[0.25em] hover:bg-[#2a251f] hover:text-[#f8f5f0] transition-colors">
             {closeLabel}
@@ -47,14 +47,13 @@ export default function Craftsmanship() {
         img={HERO_CRAFT} tall
       />
 
-            {/* 生产流程 */}
-            <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
+      {/* 生产流程 */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
         <SectionHead en="OUR PROCESS" zh="生产流程" enTitle="Our Process" />
         <div className="mt-16 overflow-x-auto pb-4">
           <div className="min-w-[1000px] relative">
             {/* 上排 01-13 */}
-                        {/* 上排 01-13 */}
-                        <div className="flex">
+            <div className="flex">
               {[
                 { no: '01', name: t('纱线到厂', 'Yarn Arrival') },
                 { no: '02', name: t('纱线质检', 'Yarn Inspection') },
@@ -137,18 +136,18 @@ export default function Craftsmanship() {
       </section>
 
       {/* 创新工艺与技术 —— 了解更多打开详情弹窗 */}
-      <h3 className="font-serif-d text-3xl font-medium mt-2">{lang === 'en' ? tech.enTitle : tech.title}</h3>
-<p className="text-[14px] leading-[2] text-[#6b6257]">{lang === 'en' ? tech.enDetail : tech.detail}</p>
+      <section className="bg-[#f2eee6] py-20 md:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <SectionHead en="INNOVATION" zh="创新工艺与技术" enTitle="Innovation & Technology" />
           <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
             {TECHS.map((tech, i) => (
               <Reveal key={tech.title} delay={i * 110}>
                 <div className="group">
                   <button onClick={() => setActive(i)} className="zoom-img block w-full aspect-[4/3] bg-white">
-                    <img src={tech.img} alt={tech.title} className="w-full h-full object-cover" loading="lazy" />
+                    <img src={tech.img} alt={lang === 'en' ? tech.enTitle : tech.title} className="w-full h-full object-cover" loading="lazy" />
                   </button>
                   <h3 className="font-serif-d text-xl font-medium mt-5">{lang === 'en' ? tech.enTitle : tech.title}</h3>
-<p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{lang === 'en' ? tech.enDesc : tech.desc}</p>
+                  <p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{lang === 'en' ? tech.enDesc : tech.desc}</p>
                   <button onClick={() => setActive(i)} className="arrow-link text-[12px] tracking-[0.2em] border-b border-[#2a251f] pb-0.5 mt-4">
                     {t('了解更多', 'Learn More')} <span className="arr">→</span>
                   </button>
@@ -190,16 +189,4 @@ export default function Craftsmanship() {
           <Reveal delay={120}>
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 mt-14">
               {PARTNERS.map(p => (
-                <span key={p} className="font-serif-d text-2xl md:text-3xl font-medium tracking-wide text-[#2a251f] hover:text-[#a8895b] transition-colors cursor-default md:px-10 md:border-r last:border-0 border-[#d8d0c2]">
-                  {p}
-                </span>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <TechModal tech={active !== null ? TECHS[active] : null} onClose={() => setActive(null)} closeLabel={t('关闭', 'Close')} />
-    </>
-  );
-}
+                <span key={p}
