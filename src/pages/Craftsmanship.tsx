@@ -53,21 +53,22 @@ export default function Craftsmanship() {
         <div className="mt-16 overflow-x-auto pb-4">
           <div className="min-w-[1000px] relative">
             {/* 上排 01-13 */}
-            <div className="flex">
+                        {/* 上排 01-13 */}
+                        <div className="flex">
               {[
-                { no: '01', name: '纱线到厂' },
-                { no: '02', name: '纱线质检' },
-                { no: '03', name: '纱线入库' },
-                { no: '04', name: '横机编织' },
-                { no: '05', name: '横机半成品检验（批件检验）' },
-                { no: '06', name: '套口缝合' },
-                { no: '07', name: '套口检验' },
-                { no: '08', name: '手缝' },
-                { no: '09', name: '洗前照灯检验' },
-                { no: '10', name: '小烫' },
-                { no: '11', name: '洗水' },
-                { no: '12', name: '烘干' },
-                { no: '13', name: '洗后照灯检验' },
+                { no: '01', name: t('纱线到厂', 'Yarn Arrival') },
+                { no: '02', name: t('纱线质检', 'Yarn Inspection') },
+                { no: '03', name: t('纱线入库', 'Yarn Storage') },
+                { no: '04', name: t('横机编织', 'Flat Knitting') },
+                { no: '05', name: t('横机半成品检验（批件检验）', 'Semi-finished Inspection (Batch)') },
+                { no: '06', name: t('套口缝合', 'Linking') },
+                { no: '07', name: t('套口检验', 'Linking Inspection') },
+                { no: '08', name: t('手缝', 'Hand Sewing') },
+                { no: '09', name: t('洗前照灯检验', 'Pre-wash Light Inspection') },
+                { no: '10', name: t('小烫', 'Light Pressing') },
+                { no: '11', name: t('洗水', 'Washing') },
+                { no: '12', name: t('烘干', 'Drying') },
+                { no: '13', name: t('洗后照灯检验', 'Post-wash Light Inspection') },
               ].map((step, i) => (
                 <Reveal key={step.no} delay={i * 40} className="flex-1 text-center relative group">
                   <div className="relative inline-block">
@@ -96,24 +97,24 @@ export default function Craftsmanship() {
                   </div>
                   <div className="absolute left-1/2 bottom-full w-px h-8 bg-[#d8d0c2] -translate-x-1/2" />
                 </div>
-                <p className="text-[12px] font-medium text-[#2a251f] mt-2">检验合格</p>
-                <p className="text-[12px] font-medium text-[#2a251f]">出货</p>
+                <p className="text-[12px] font-medium text-[#2a251f] mt-2">{t('检验合格', 'Inspection Passed')}</p>
+                <p className="text-[12px] font-medium text-[#2a251f]">{t('出货', '& Shipped')}</p>
                 <div className="absolute top-[24px] left-[calc(50%+26px)] right-[calc(-50%+26px)] h-px bg-[#d8d0c2]" />
               </Reveal>
 
               {[
-                { no: '25', name: '成箱后QC抽检' },
-                { no: '24', name: '装箱' },
-                { no: '23', name: '检针' },
-                { no: '22', name: 'QC抽检' },
-                { no: '21', name: '包装' },
-                { no: '20', name: '挂吊牌' },
-                { no: '19', name: '成品检验' },
-                { no: '18', name: '复尺检验' },
-                { no: '17', name: '整烫' },
-                { no: '16', name: '半成品检验' },
-                { no: '15', name: '平车（订标，纽扣，拉链等）' },
-                { no: '14', name: '小烫' },
+                { no: '25', name: t('成箱后QC抽检', 'Post-boxing QC Spot Check') },
+                { no: '24', name: t('装箱', 'Boxing') },
+                { no: '23', name: t('检针', 'Needle Detection') },
+                { no: '22', name: t('QC抽检', 'QC Spot Check') },
+                { no: '21', name: t('包装', 'Packaging') },
+                { no: '20', name: t('挂吊牌', 'Tagging') },
+                { no: '19', name: t('成品检验', 'Final Inspection') },
+                { no: '18', name: t('复尺检验', 'Re-measurement') },
+                { no: '17', name: t('整烫', 'Final Pressing') },
+                { no: '16', name: t('半成品检验', 'Semi-finished QC') },
+                { no: '15', name: t('平车（订标，纽扣，拉链等）', 'Overlock (Labels, Buttons, Zippers)') },
+                { no: '14', name: t('小烫', 'Light Pressing') },
               ].map((step, i) => (
                 <Reveal key={step.no} delay={(14 + i) * 40} className="flex-1 text-center relative group">
                   <div className="relative inline-block">
