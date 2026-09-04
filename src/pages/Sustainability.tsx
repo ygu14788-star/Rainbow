@@ -89,57 +89,45 @@ export default function Sustainability({ go }: { go: Go }) {
         </Reveal>
       </section>
 
-      {/* 社会责任认证 */}
-      <section className="bg-[#f2eee6] py-20 md:py-24 text-center">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <SectionHead en="SOCIAL RESPONSIBILITY" zh="全面认证与社会责任" enTitle="Certifications & Social Responsibility" />
+            {/* 社会责任认证 */}
+            <section className="bg-[#f2eee6] pt-16 md:pt-20 pb-8 md:pb-10 text-center">
+        <SectionHead en="SOCIAL RESPONSIBILITY" zh="全面认证与社会责任" enTitle="Social Responsibility" />
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-10">
           <Reveal>
-            <div className="flex flex-col sm:flex-row justify-center items-stretch gap-6">
-              <div className="bg-white rounded-2xl border border-[#e4ddd1] shadow-[0_2px_12px_rgba(42,37,31,0.06)] px-10 py-8 flex flex-col items-center justify-center gap-4 min-w-[280px]">
-                <img src={CERT_BSCI} alt="amfori BSCI" className="h-12 md:h-14 w-auto" />
-                <div>
-                  <p className="text-[13px] text-[#6b6257]">{t('欧盟 amfori BSCI 商界社会责任倡议', 'amfori BSCI — Business Social Compliance Initiative')}</p>
-                  <p className="text-[12px] tracking-wider text-[#8a8177] mt-1">{t('编码：', 'Code: ')}156-005247-000</p>
-                </div>
-              </div>
-              <div className="bg-white rounded-2xl border border-[#e4ddd1] shadow-[0_2px_12px_rgba(42,37,31,0.06)] px-10 py-8 flex flex-col items-center justify-center gap-4 min-w-[280px]">
-                <img src={CERT_DUNS} alt="D-U-N-S Registered" className="h-16 md:h-20 w-auto" />
-                <div>
-                  <p className="text-[13px] text-[#6b6257]">{t('邓白氏企业认证 D-U-N-S® Registered', 'Dun & Bradstreet D-U-N-S® Registered')}</p>
-                  <p className="text-[12px] tracking-wider text-[#8a8177] mt-1">{t('编码：', 'Code: ')}53-996-1254</p>
-                </div>
-              </div>
+            <div className="bg-white p-8 rounded-sm">
+              <img src={IMG('bsci.jpg')} alt="BSCI" className="h-12 mx-auto mb-4" loading="lazy" />
+              <p className="text-[15px] font-medium">{t('欧盟 amfori BSCI 商界社会责任倡议', 'EU amfori BSCI Business Social Compliance Initiative')}</p>
+              <p className="text-[13px] text-[#8a8177] mt-2">{t('编码：156-005247-000', 'Code: 156-005247-000')}</p>
             </div>
           </Reveal>
-          <Reveal>
-            <p className="text-[14px] leading-relaxed text-[#6b6257] max-w-xl mx-auto mt-6">
-              {t('我们通过社会责任认证，保障员工权益，推动公平、透明、负责任的供应链管理。',
-                 'Through social responsibility certifications, we protect employee rights and promote fair, transparent and responsible supply chain management.')}
-            </p>
+          <Reveal delay={100}>
+            <div className="bg-white p-8 rounded-sm">
+              <img src={IMG('duns.jpg')} alt="D-U-N-S" className="h-12 mx-auto mb-4" loading="lazy" />
+              <p className="text-[15px] font-medium">{t('邓白氏企业认证 D-U-N-S® Registered', 'Dun & Bradstreet D-U-N-S® Registered')}</p>
+              <p className="text-[13px] text-[#8a8177] mt-2">{t('编码：53-996-1254', 'Code: 53-996-1254')}</p>
+            </div>
           </Reveal>
         </div>
+        <p className="mt-8 text-[15px] text-[#6b6257] max-w-2xl mx-auto">
+          {t('我们通过社会责任认证，保障员工权益，推动公平、透明、负责任的供应链管理。', 'Through social responsibility certification, we protect employee rights and promote fair, transparent, and responsible supply chain management.')}
+        </p>
       </section>
 
-      {/* 社会责任认证 */}
-            <section className="bg-[#f2eee6] py-20 md:py-24 text-center">
-        ...
-      </section>
       {/* 彩虹公益·暖冬项目 */}
       <section className="bg-[#f8f5f0] py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-2 gap-14 items-center">
-            {/* 左侧文字 */}
-            <Reveal>
-              <p className="text-[11px] tracking-[0.35em] text-[#a8895b] mb-3">RAINBOW CHARITY · WARM WINTER PROJECT</p>
-              <h2 className="font-serif-d text-4xl md:text-5xl font-medium">彩虹公益·暖冬项目</h2>
-              <p className="text-[15px] text-[#6b6257] mt-4 italic">温暖童心，守护冬日暖阳</p>
+            {/* 修改后（支持中英文切换） */}
+<p className="text-[11px] tracking-[0.35em] text-[#a8895b] mb-3">{t('RAINBOW CHARITY · WARM WINTER PROJECT', 'RAINBOW CHARITY · WARM WINTER PROJECT')}</p>
+<h2 className="font-serif-d text-4xl md:text-5xl font-medium">{t('彩虹公益 · 暖冬项目', 'Rainbow Charity · Warm Winter Project')}</h2>
+<p className="text-[15px] text-[#6b6257] mt-4 italic">{t('温暖童心，守护冬日暖阳', 'Warm Hearts, Guard the Winter Sun')}</p>
               <div className="w-10 h-px bg-[#a8895b] my-8" />
               <p className="text-[14px] leading-[2] text-[#6b6257]">
-                {t('闰博尔积极投身公益事业，每年冬季为偏远地区的孩子们捐赠亲手编织的帽子、围巾与手套。一针一线，承载着我们对下一代的关爱与温度。我们坚信，企业的价值不仅在于创造优质的产品，更在于回馈社会、传递温暖。',
+                {t('闰博尔积极投身公益事业，公司内部成立了"彩虹公益"项目，其核心为"暖冬项目"。项目利用每年订单生产剩余的纱线原料，由员工亲手编织成帽子、围巾、手套三件套，捐赠给中西部贫困地区的学校。自项目启动以来，已覆盖云南、四川、贵州、甘肃、西藏、新疆等10余所偏远地区学校，累计有上万名儿童受益。',
                    'Rainbow is actively committed to public welfare. Every winter, we donate hand-knitted hats, scarves and gloves to children in remote areas. Every stitch carries our care and warmth for the next generation. We believe that a company\'s value lies not only in creating excellent products, but also in giving back to society and spreading warmth.')}
               </p>
               <p className="text-[13px] leading-relaxed text-[#8a8177] mt-4">
-                {t('自项目启动以来，已累计为超过 3,000 名儿童送去暖冬物资。未来，我们将继续扩大公益版图，让针织的温度触达更多需要帮助的角落。',
+                {t('一针一线，承载着我们对下一代的关爱与温度。我们坚信，企业的价值不仅在于创造优质的产品，更在于回馈社会、传递温暖。项目资金来源于公司每年生产的样衣义卖，由全体员工利用周末或节假日参与，所得款项全部投入彩虹公益。',
                    'Since its launch, the project has delivered warm winter supplies to over 3,000 children. We will continue to expand our charitable reach, letting the warmth of knitwear touch more corners in need.')}
               </p>
             </Reveal>
