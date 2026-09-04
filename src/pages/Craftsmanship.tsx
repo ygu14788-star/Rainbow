@@ -34,7 +34,7 @@ function TechModal({ tech, onClose, closeLabel }: { tech: Tech | null; onClose: 
 export default function Craftsmanship() {
   const [active, setActive] = useState<number | null>(null);
   const { t } = useLang();
-  const { PROCESS, TECHS, PROMISES, PARTNERS, HERO_CRAFT } = useData();
+  const { HERO_CRAFT, IMG } = useData();
 
   return (
     <>
