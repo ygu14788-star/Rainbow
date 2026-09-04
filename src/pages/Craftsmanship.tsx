@@ -190,3 +190,16 @@ export default function Craftsmanship() {
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 mt-14">
               {PARTNERS.map(p => (
                 <span key={p}
+                className="font-serif-d text-2xl md:text-3xl font-medium tracking-wide text-[#2a251f] hover:text-[#a8895b] transition-colors cursor-default md:px-10 md:border-r last:border-0 border-[#d8d0c2]">
+                {p}
+              </span>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </section>
+
+    <TechModal tech={active !== null ? TECHS[active] : null} onClose={() => setActive(null)} closeLabel={t('关闭', 'Close')} lang={lang} />
+  </>
+);
+}
