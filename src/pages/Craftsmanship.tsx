@@ -33,7 +33,7 @@ function TechModal({ tech, onClose, closeLabel }: { tech: Tech | null; onClose: 
 
 export default function Craftsmanship() {
   const [active, setActive] = useState<number | null>(null);
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const { HERO_CRAFT, TECHS, PROMISES, PARTNERS } = useData();
 
   return (
@@ -137,18 +137,18 @@ export default function Craftsmanship() {
       </section>
 
       {/* 创新工艺与技术 —— 了解更多打开详情弹窗 */}
-      <section className="bg-[#f2eee6] py-20 md:py-28">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <h3 className="font-serif-d text-3xl font-medium mt-2">{lang === 'en' ? tech.enTitle : tech.title}</h3>
+<p className="text-[14px] leading-[2] text-[#6b6257]">{lang === 'en' ? tech.enDetail : tech.detail}</p>
           <SectionHead en="INNOVATION" zh="创新工艺与技术" enTitle="Innovation & Technology" />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
             {TECHS.map((tech, i) => (
               <Reveal key={tech.title} delay={i * 110}>
                 <div className="group">
                   <button onClick={() => setActive(i)} className="zoom-img block w-full aspect-[4/3] bg-white">
                     <img src={tech.img} alt={tech.title} className="w-full h-full object-cover" loading="lazy" />
                   </button>
-                  <h3 className="font-serif-d text-2xl font-medium mt-6">{tech.title}</h3>
-                  <p className="text-[13px] leading-relaxed text-[#8a8177] mt-3">{tech.desc}</p>
+                  <h3 className="font-serif-d text-xl font-medium mt-5">{lang === 'en' ? tech.enTitle : tech.title}</h3>
+<p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{lang === 'en' ? tech.enDesc : tech.desc}</p>
                   <button onClick={() => setActive(i)} className="arrow-link text-[12px] tracking-[0.2em] border-b border-[#2a251f] pb-0.5 mt-4">
                     {t('了解更多', 'Learn More')} <span className="arr">→</span>
                   </button>
