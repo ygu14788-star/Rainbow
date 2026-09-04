@@ -1,9 +1,35 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Reveal, Hero, SectionHead } from '../components/chrome';
 import { useLang, useData } from '../i18n';
 
 type Tech = { img: string; title: string; enTitle: string; desc: string; enDesc: string; detail: string; enDetail: string };
 
+/* 数字滚动组件：进入视口时从 0 滚动到目标值 */
+function CountUp({ end, prefix = '', suffix = '' }: { end: number; prefix?: string; suffix?: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting && !started.current) {
+        started.current = true;
+        const t0 = performance.now();
+        const dur = 1400;
+        const tick = (now: number) => {
+          const p = Math.min((now - t0) / dur, 1);
+          setVal(Math.round(end * (1 - Math.pow(1 - p, 3))));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [end]);
+  return <span ref={ref}>{prefix}{val}{suffix}</span>;
+}
 /* 工艺详情弹窗 */
 function TechModal({ tech, onClose, closeLabel, lang }: { tech: Tech | null; onClose: () => void; closeLabel: string; lang: string }) {
   if (!tech) return null;
@@ -33,8 +59,9 @@ function TechModal({ tech, onClose, closeLabel, lang }: { tech: Tech | null; onC
 
 export default function Craftsmanship() {
   const [active, setActive] = useState<number | null>(null);
+  const [openTerm, setOpenTerm] = useState(-1);
   const { t, lang } = useLang();
-  const { HERO_CRAFT, TECHS, PROMISES, PARTNERS } = useData();
+  const { HERO_CRAFT, TECHS, PROMISES, PARTNERS, SERVICES, TRADE_TERMS } = useData();
 
   return (
     <>
@@ -155,6 +182,56 @@ export default function Craftsmanship() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+            {/* 服务与交付 */}
+            <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
+        <SectionHead en="SERVICE & DELIVERY" zh="服务与交付" enTitle="Service & Delivery" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-14">
+          {SERVICES.map((s, i) => (
+            <Reveal key={s.zh} delay={i * 100}
+              className="group relative overflow-hidden bg-[#f8f5f0] border border-[#e4ddd1] p-7 text-center hover:-translate-y-1.5 hover:shadow-lg transition-all duration-400">
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-[#a8895b] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <p className="text-[12px] tracking-[0.2em] text-[#8a8177]">{lang === 'en' ? s.en : s.zh}</p>
+              <p className="font-serif-d text-3xl md:text-[42px] font-medium text-[#2a251f] mt-4 group-hover:text-[#a8895b] transition-colors duration-300 leading-tight">
+                {s.value > 0 ? (
+                  <CountUp end={s.value} prefix={s.prefix}
+                    suffix={s.suffix + (lang === 'en' ? ' ' + s.unitEn : ' ' + s.unitZh)} />
+                ) : (
+                  <span className="text-2xl md:text-[26px] tracking-wide">{lang === 'en' ? s.descEn : s.descZh}</span>
+                )}
+              </p>
+              {s.value > 0 && (
+                <p className="text-[12px] text-[#8a8177] mt-3 leading-relaxed">{lang === 'en' ? s.descEn : s.descZh}</p>
+              )}
+            </Reveal>
+          ))}
+        </div>
+
+        {/* 贸易术语详解（手风琴） */}
+        <div className="max-w-3xl mx-auto mt-20">
+          <p className="text-[11px] tracking-[0.35em] text-[#a8895b] text-center">TRADE TERMS</p>
+          <h3 className="font-serif-d text-2xl md:text-3xl font-medium text-center mt-2 mb-8">
+            {t('合作模式详解', 'Trade Terms Explained')}
+          </h3>
+          {TRADE_TERMS.map((term, i) => (
+            <Reveal key={term.term} delay={i * 60}>
+              <div className={`faq-item border-b border-[#e4ddd1] ${openTerm === i ? 'open' : ''}`}>
+                <button onClick={() => setOpenTerm(openTerm === i ? -1 : i)}
+                  className="w-full flex items-center justify-between py-5 text-left group">
+                  <span className="flex items-baseline gap-4 flex-wrap">
+                    <span className="font-serif-d text-lg font-medium text-[#2a251f] group-hover:text-[#a8895b] transition-colors">{term.term}</span>
+                    <span className="text-[12px] text-[#8a8177]">{lang === 'en' ? term.en : term.zh}</span>
+                  </span>
+                  <span className="plus text-xl text-[#8a8177] shrink-0 ml-6">+</span>
+                </button>
+                <div className="faq-body"><div>
+                  <p className="pb-5 text-[13px] leading-relaxed text-[#8a8177]">{lang === 'en' ? term.descEn : term.descZh}</p>
+                </div></div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 

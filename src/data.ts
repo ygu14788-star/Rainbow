@@ -291,7 +291,20 @@ export const PROMISES = [
 ];
 
 export const PARTNERS = ['TOP LINE', 'Consinee', 'XINAO TEXTILE', 'UPW', 'Suedwolle'];
+// ---------- 服务与交付 ----------
+export const SERVICES = [
+  { value: 30, prefix: '', suffix: '万+', unitZh: '件/年', unitEn: 'pcs/year', zh: '年产能', en: 'Annual Capacity', descZh: '月产 3 万件毛衣，年产 30 万件', descEn: '30,000 pieces monthly, 300,000 pieces annually' },
+  { value: 10, prefix: '7-', suffix: '', unitZh: '天', unitEn: 'days', zh: '样品交付周期', en: 'Sample Lead Time', descZh: '从确认需求到样品寄出', descEn: 'From confirmed requirement to sample dispatch' },
+  { value: 70, prefix: '45-', suffix: '', unitZh: '天', unitEn: 'days', zh: '大货交付周期', en: 'Bulk Lead Time', descZh: '视订单量与工艺复杂度而定', descEn: 'Depending on order volume and complexity' },
+  { value: 0, prefix: '', suffix: '', unitZh: '', unitEn: '', zh: '合作模式', en: 'Trade Terms', descZh: 'FOB · CIF · DAP · DDP（DDP 仅限欧洲）', descEn: 'FOB · CIF · DAP · DDP (DDP for EU only)' },
+];
 
+export const TRADE_TERMS = [
+  { term: 'FOB', zh: '离岸价', en: 'Free On Board', descZh: '货物在装运港装上船后，风险与费用即转移给买方。适合拥有自有物流渠道的客户。', descEn: 'Risk and cost transfer to the buyer once goods are loaded on board at the port of shipment. Ideal for clients with their own logistics channels.' },
+  { term: 'CIF', zh: '成本、保险费加运费', en: 'Cost, Insurance & Freight', descZh: '卖方承担货物运至目的港的运费与保险费。适合希望简化运输安排的客户。', descEn: 'The seller covers freight and insurance to the destination port. Suitable for clients who prefer simplified shipping arrangements.' },
+  { term: 'DAP', zh: '目的地交货', en: 'Delivered At Place', descZh: '卖方负责将货物运输至买方指定地点，进口清关由买方办理。', descEn: 'The seller delivers goods to the buyer\'s named destination; import clearance is handled by the buyer.' },
+  { term: 'DDP', zh: '完税后交货（仅限欧洲）', en: 'Delivered Duty Paid (EU Only)', descZh: '卖方承担运输、清关及全部税费，门到门一站式服务。目前仅限欧洲地区。', descEn: 'The seller covers shipping, customs clearance and all duties — a true door-to-door service. Currently available for Europe only.' },
+];
 // ---------- Brand Story ----------
 export const TIMELINE = [
   { date: '2016.11.17', title: '公司成立', desc: '公司成立于2016年11月17日，深耕于毛衫设计、生产及服务。' },
