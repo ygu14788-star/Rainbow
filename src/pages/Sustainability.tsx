@@ -95,14 +95,14 @@ export default function Sustainability({ go }: { go: Go }) {
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-10">
           <Reveal>
             <div className="bg-white p-8 rounded-sm">
-              <img src={IMG('bsci.jpg')} alt="BSCI" className="h-12 mx-auto mb-4" loading="lazy" />
+            <img src={IMG('cert-bsci.png')} alt="BSCI" className="h-12 mx-auto mb-4" loading="lazy" />
               <p className="text-[15px] font-medium">{t('欧盟 amfori BSCI 商界社会责任倡议', 'EU amfori BSCI Business Social Compliance Initiative')}</p>
               <p className="text-[13px] text-[#8a8177] mt-2">{t('编码：156-005247-000', 'Code: 156-005247-000')}</p>
             </div>
           </Reveal>
           <Reveal delay={100}>
             <div className="bg-white p-8 rounded-sm">
-              <img src={IMG('duns.jpg')} alt="D-U-N-S" className="h-12 mx-auto mb-4" loading="lazy" />
+            <img src={IMG('cert-duns.png')} alt="D-U-N-S" className="h-12 mx-auto mb-4" loading="lazy" />
               <p className="text-[15px] font-medium">{t('邓白氏企业认证 D-U-N-S® Registered', 'Dun & Bradstreet D-U-N-S® Registered')}</p>
               <p className="text-[13px] text-[#8a8177] mt-2">{t('编码：53-996-1254', 'Code: 53-996-1254')}</p>
             </div>
