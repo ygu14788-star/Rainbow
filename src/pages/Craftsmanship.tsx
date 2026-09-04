@@ -47,25 +47,91 @@ export default function Craftsmanship() {
         img={HERO_CRAFT} tall
       />
 
-      {/* 生产流程 */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
+            {/* 生产流程 */}
+            <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
         <SectionHead en="OUR PROCESS" zh="生产流程" enTitle="Our Process" />
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
-          {PROCESS.map((p, i) => (
-            <Reveal key={p.no} delay={i * 90}>
-              <div className="group">
-                <div className="zoom-img aspect-square bg-white">
-                  <img src={p.img} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+        <div className="mt-16 overflow-x-auto pb-4">
+          <div className="min-w-[1000px] relative">
+            {/* 上排 01-13 */}
+            <div className="flex">
+              {[
+                { no: '01', name: '纱线到厂' },
+                { no: '02', name: '纱线质检' },
+                { no: '03', name: '纱线入库' },
+                { no: '04', name: '横机编织' },
+                { no: '05', name: '横机半成品检验（批件检验）' },
+                { no: '06', name: '套口缝合' },
+                { no: '07', name: '套口检验' },
+                { no: '08', name: '手缝' },
+                { no: '09', name: '洗前照灯检验' },
+                { no: '10', name: '小烫' },
+                { no: '11', name: '洗水' },
+                { no: '12', name: '烘干' },
+                { no: '13', name: '洗后照灯检验' },
+              ].map((step, i) => (
+                <Reveal key={step.no} delay={i * 40} className="flex-1 text-center relative group">
+                  <div className="relative inline-block">
+                    <div className="w-9 h-9 rounded-full border border-[#d8d0c2] bg-[#f8f5f0] flex items-center justify-center text-[12px] text-[#8a8177] group-hover:border-[#a8895b] group-hover:text-[#a8895b] transition-colors duration-300 mx-auto">
+                      {step.no}
+                    </div>
+                    {i === 12 && <div className="absolute left-1/2 top-full w-px h-16 bg-[#d8d0c2] -translate-x-1/2" />}
+                  </div>
+                  <p className="text-[11px] text-[#8a8177] mt-3 leading-tight group-hover:text-[#2a251f] transition-colors duration-300 px-0.5">
+                    {step.name}
+                  </p>
+                  {i < 12 && (
+                    <div className="absolute top-[18px] left-[calc(50%+20px)] right-[calc(-50%+20px)] h-px bg-[#d8d0c2]" />
+                  )}
+                </Reveal>
+              ))}
+            </div>
+
+            {/* 下排 出货 + 25-14 */}
+            <div className="flex mt-10">
+              {/* 检验合格出货 */}
+              <Reveal delay={520} className="flex-1 text-center relative">
+                <div className="relative inline-block">
+                  <div className="w-12 h-12 rounded-full bg-[#a8895b] flex items-center justify-center text-white text-lg mx-auto">
+                    ✓
+                  </div>
+                  <div className="absolute left-1/2 bottom-full w-px h-8 bg-[#d8d0c2] -translate-x-1/2" />
                 </div>
-                <div className="mt-5 flex items-baseline gap-3">
-                  <span className="font-serif-d text-xl text-[#a8895b]">{p.no}</span>
-                  <h3 className="text-[15px] font-medium">{p.title}</h3>
-                  {i < PROCESS.length - 1 && <span className="hidden md:inline text-[#c9c0b2]">→</span>}
-                </div>
-                <p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{p.desc}</p>
-              </div>
-            </Reveal>
-          ))}
+                <p className="text-[12px] font-medium text-[#2a251f] mt-2">检验合格</p>
+                <p className="text-[12px] font-medium text-[#2a251f]">出货</p>
+                <div className="absolute top-[24px] left-[calc(50%+26px)] right-[calc(-50%+26px)] h-px bg-[#d8d0c2]" />
+              </Reveal>
+
+              {[
+                { no: '25', name: '成箱后QC抽检' },
+                { no: '24', name: '装箱' },
+                { no: '23', name: '检针' },
+                { no: '22', name: 'QC抽检' },
+                { no: '21', name: '包装' },
+                { no: '20', name: '挂吊牌' },
+                { no: '19', name: '成品检验' },
+                { no: '18', name: '复尺检验' },
+                { no: '17', name: '整烫' },
+                { no: '16', name: '半成品检验' },
+                { no: '15', name: '平车（订标，纽扣，拉链等）' },
+                { no: '14', name: '小烫' },
+              ].map((step, i) => (
+                <Reveal key={step.no} delay={(14 + i) * 40} className="flex-1 text-center relative group">
+                  <div className="relative inline-block">
+                    <div className="w-9 h-9 rounded-full border border-[#d8d0c2] bg-[#f8f5f0] flex items-center justify-center text-[12px] text-[#8a8177] group-hover:border-[#a8895b] group-hover:text-[#a8895b] transition-colors duration-300 mx-auto">
+                      {step.no}
+                    </div>
+                    {i === 11 && <div className="absolute left-1/2 bottom-full w-px h-8 bg-[#d8d0c2] -translate-x-1/2" />}
+                  </div>
+                  <p className="text-[11px] text-[#8a8177] mt-3 leading-tight group-hover:text-[#2a251f] transition-colors duration-300 px-0.5">
+                    {step.name}
+                  </p>
+                  {i < 11 && (
+                    <div className="absolute top-[18px] left-[calc(50%+20px)] right-[calc(-50%+20px)] h-px bg-[#d8d0c2]" />
+                  )}
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
