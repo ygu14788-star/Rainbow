@@ -380,3 +380,37 @@ export const SOCIALS = [
   { name: 'WeChat', url: '#' },
   { name: 'WhatsApp', url: 'https://wa.me/8618021461929' },
 ];
+
+// 可持续页面专用数据
+export const HERO_SUSTAINABILITY = IMG('nature.jpg');
+
+export const COMMITMENTS = [
+  { title: '可追溯羊毛', desc: '100% 可追溯羊毛，确保动物福利与牧场生态。' },
+  { title: '有机棉', desc: '无农药、无化肥，保护土壤与水源。' },
+  { title: '再生纤维', desc: '利用回收材料，减少资源消耗。' },
+  { title: '天然染料', desc: '低环境影响的植物基染料。' },
+  { title: '节能生产', desc: '优化能耗，降低碳足迹。' },
+];
+
+export const CERTS_ENV = [
+  { img: IMG('oeko-tex.jpg'), label: 'OEKO-TEX® Standard 100' },
+  { img: IMG('grs.jpg'), label: 'GRS 全球回收标准' },
+  { img: IMG('gots.jpg'), label: 'GOTS 全球有机纺织品标准' },
+  { img: IMG('bluesign.jpg'), label: 'bluesign® 蓝标认证' },
+  { img: IMG('fsc.jpg'), label: 'FSC 森林管理委员会' },
+];
+
+export const MATERIALS = [
+  { zh: '可追溯羊毛', en: 'Traceable Wool', img: IMG('mat-wool.jpg'), desc: '来自经认证牧场的优质美利奴羊毛，全程可追溯，确保动物福利与生态平衡。' },
+  { zh: '有机棉', en: 'Organic Cotton', img: IMG('mat-cotton.jpg'), desc: '种植过程中不使用化学农药与合成肥料，保护土壤健康与水源纯净。' },
+  { zh: '再生纤维', en: 'Recycled Fibres', img: IMG('mat-recycled.jpg'), desc: '由回收塑料瓶与纺织废料制成，减少资源消耗与环境污染。' },
+  { zh: '天丝™莱赛尔', en: 'TENCEL™ Lyocell', img: IMG('mat-lyocell.jpg'), desc: '源自可持续管理森林的木浆，闭环生产，溶剂回收率高达 99%。' },
+];
+
+export const IMPACT = [
+  { value: 35, suffix: '%', label: '碳排放减少' },
+  { value: 42, suffix: '%', label: '水耗降低' },
+  { value: 28, suffix: '%', label: '能源节约' },
+  { value: 100, suffix: '%', label: '可再生能源使用' },
+  { value: 0, suffix: '', label: '有害化学品排放' },
+];

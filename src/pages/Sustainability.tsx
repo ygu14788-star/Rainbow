@@ -12,7 +12,7 @@ const ICONS = [
 
 export default function Sustainability({ go }: { go: Go }) {
   const { t } = useLang();
-  const { HERO_SUSTAINABILITY, IMG } = useData();
+  const { IMG } = useData();
   return (
     <>
       {/* 全幅自然首屏 */}
