@@ -268,6 +268,28 @@ export const PROMISES = [
   { title: 'Lifetime Warranty', desc: 'We provide a lifetime warranty on our products, letting quality accompany every important moment.' },
   { title: '99% Pass Rate', desc: 'We promise a factory pass rate of up to 99%, guarding every finished piece with rigorous standards.' },
 ];
+
+// ---------- 核心优势 ----------
+export const STRENGTHS = [
+  { img: IMG('real-machine.jpg'), tagZh: '专利技术', tagEn: 'PATENTED', zh: '全成型无缝专利技术', en: 'Wholegarment Seamless Patent Technology',
+    descZh: '22针超细针型无缝技术在功能性产品创新与应用上行业领先，从运动功能服到高端贴身层，打通时尚与功能的壁垒。',
+    descEn: 'Our patented 22-gauge ultra-fine seamless technology leads the industry in functional product innovation — from athletic wear to premium base layers, breaking the barrier between fashion and function.' },
+  { img: IMG('handcrafted.jpg'), tagZh: 'Handmade', tagEn: 'HANDMADE', zh: '手工钩针 · 手工棒针编织', en: 'Hand Crochet & Hand Knitting',
+    descZh: '娴熟的手工编织匠人掌握传统手作技艺，从开发到量产提供全流程服务，赋予每一件作品独特的温度与灵魂。',
+    descEn: 'Skilled artisans master traditional crochet and hand knitting, serving the full process from development to mass production, giving every piece unique warmth and soul.' },
+  { img: '', tagZh: '', tagEn: '', zh: '精准版型与纸样把控', en: 'Precise Pattern & Fit Control',
+    descZh: '在制作版型要求严苛的款式方面拥有丰富经验，精准的纸样制作与稳定一致的版型效果，是对品质有极致要求的品牌的首选伙伴。',
+    descEn: 'Extensive experience in fit-critical styles. Precise pattern-making and consistently accurate fit make us the trusted partner for quality-driven brands.' },
+  { img: '', tagZh: 'EST. 2024', tagEn: 'EST. 2024', zh: '数字化样衣 · STYLE 3D', en: 'Digital Sampling · STYLE 3D',
+    descZh: '自2024年成立数字内容团队，运用 STYLE 3D 软件实现首轮样衣数字化，大幅缩短开发周期并降低打样成本。',
+    descEn: 'Since 2024, our in-house digital content team delivers first-round samples via STYLE 3D, significantly shortening development cycles and reducing sampling costs.' },
+];
+
+export const STRENGTH_STATS = [
+  { value: 26, prefix: '', unitZh: ' 道', unitEn: '', zh: '严苛质量管控', en: 'Rigorous Quality Control', labelZh: '全流程品控节点 · 出厂合格率 99%', labelEn: 'Quality checkpoints across the process · 99% factory pass rate' },
+  { value: 10, prefix: '7-', unitZh: ' 天', unitEn: ' days', zh: '及时交付', en: 'On-Time Delivery', labelZh: '样品快速交付 · 大货 45-70 天', labelEn: 'Samples in 7-10 days · Bulk delivery in 45-70 days' },
+];
+
 // ---------- 服务与交付 ----------
 export const SERVICES = [
   { value: 30, prefix: '', suffix: '万+', unitZh: '件/年', unitEn: 'pcs/year', zh: '年产能', en: 'Annual Capacity', descZh: '月产 3 万件毛衣，年产 30 万件', descEn: '30,000 pieces monthly, 300,000 pieces annually' },

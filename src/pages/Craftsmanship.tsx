@@ -30,6 +30,7 @@ function CountUp({ end, prefix = '', suffix = '' }: { end: number; prefix?: stri
   }, [end]);
   return <span ref={ref}>{prefix}{val}{suffix}</span>;
 }
+
 /* 工艺详情弹窗 */
 function TechModal({ tech, onClose, closeLabel, lang }: { tech: Tech | null; onClose: () => void; closeLabel: string; lang: string }) {
   if (!tech) return null;
@@ -61,7 +62,7 @@ export default function Craftsmanship() {
   const [active, setActive] = useState<number | null>(null);
   const [openTerm, setOpenTerm] = useState(-1);
   const { t, lang } = useLang();
-  const { HERO_CRAFT, TECHS, PROMISES, PARTNERS, SERVICES, TRADE_TERMS } = useData();
+  const { HERO_CRAFT, TECHS, PROMISES, PARTNERS, SERVICES, TRADE_TERMS, STRENGTHS, STRENGTH_STATS } = useData();
 
   return (
     <>
@@ -73,6 +74,98 @@ export default function Craftsmanship() {
         ).split('|')}
         img={HERO_CRAFT} tall
       />
+
+      {/* 核心优势 */}
+      <section className="bg-[#f8f5f0] py-20 md:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <SectionHead en="OUR STRENGTHS" zh="核心优势" enTitle="Core Strengths" />
+          <div className="grid md:grid-cols-12 gap-5 mt-14">
+
+            {/* 左侧大图：22针无缝专利 */}
+            <Reveal className="md:col-span-5">
+              <div className="group bg-white border border-[#e4ddd1] overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow duration-400">
+                <div className="relative overflow-hidden">
+                  <div className="zoom-img aspect-[4/3]">
+                    <img src={STRENGTHS[0].img} alt={lang === 'en' ? STRENGTHS[0].en : STRENGTHS[0].zh}
+                      className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  <span className="absolute top-4 left-4 bg-[#a8895b] text-white text-[11px] tracking-[0.2em] px-3 py-1.5">
+                    {lang === 'en' ? STRENGTHS[0].tagEn : STRENGTHS[0].tagZh}
+                  </span>
+                </div>
+                <div className="p-7 flex-1">
+                  <h3 className="font-serif-d text-2xl font-medium group-hover:text-[#a8895b] transition-colors">{lang === 'en' ? STRENGTHS[0].en : STRENGTHS[0].zh}</h3>
+                  <p className="text-[13px] leading-relaxed text-[#8a8177] mt-3">{lang === 'en' ? STRENGTHS[0].descEn : STRENGTHS[0].descZh}</p>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 右侧三张 */}
+            <div className="md:col-span-7 flex flex-col gap-5">
+              {/* 手工编织 */}
+              <Reveal delay={100}>
+                <div className="group bg-white border border-[#e4ddd1] p-5 flex gap-5 items-center hover:border-[#a8895b] hover:shadow-md transition-all duration-300 flex-1">
+                  <div className="zoom-img w-24 h-24 shrink-0 overflow-hidden">
+                    <img src={STRENGTHS[1].img} alt={lang === 'en' ? STRENGTHS[1].en : STRENGTHS[1].zh}
+                      className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] tracking-[0.3em] text-[#a8895b]">{lang === 'en' ? STRENGTHS[1].tagEn : STRENGTHS[1].tagZh}</p>
+                    <h3 className="font-serif-d text-xl font-medium mt-1 group-hover:text-[#a8895b] transition-colors">{lang === 'en' ? STRENGTHS[1].en : STRENGTHS[1].zh}</h3>
+                    <p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{lang === 'en' ? STRENGTHS[1].descEn : STRENGTHS[1].descZh}</p>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* 版型纸样 */}
+              <Reveal delay={200}>
+                <div className="group bg-white border border-[#e4ddd1] p-5 flex gap-5 items-center hover:border-[#a8895b] hover:shadow-md transition-all duration-300 flex-1">
+                  <div className="w-24 h-24 shrink-0 bg-[#f2eee6] flex items-center justify-center text-[#a8895b] group-hover:bg-[#a8895b] group-hover:text-white transition-colors duration-300">
+                    <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M8 40L40 8l4 4-8 8 4 4-24 24H8v-8z" />
+                      <path d="M28 20l4 4M22 26l4 4M16 32l4 4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-serif-d text-xl font-medium group-hover:text-[#a8895b] transition-colors">{lang === 'en' ? STRENGTHS[2].en : STRENGTHS[2].zh}</h3>
+                    <p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{lang === 'en' ? STRENGTHS[2].descEn : STRENGTHS[2].descZh}</p>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* 数字化样衣 */}
+              <Reveal delay={300}>
+                <div className="group bg-white border border-[#e4ddd1] p-5 flex gap-5 items-center hover:border-[#a8895b] hover:shadow-md transition-all duration-300 flex-1">
+                  <div className="w-24 h-24 shrink-0 bg-[#2a251f] flex flex-col items-center justify-center text-[#f8f5f0]">
+                    <span className="font-serif-d text-2xl font-medium leading-none">3D</span>
+                    <span className="text-[9px] tracking-[0.2em] text-[#a8895b] mt-1.5">{lang === 'en' ? STRENGTHS[3].tagEn : STRENGTHS[3].tagZh}</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif-d text-xl font-medium group-hover:text-[#a8895b] transition-colors">{lang === 'en' ? STRENGTHS[3].en : STRENGTHS[3].zh}</h3>
+                    <p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{lang === 'en' ? STRENGTHS[3].descEn : STRENGTHS[3].descZh}</p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
+          {/* 底部数据带：质检 + 交付 */}
+          <div className="grid md:grid-cols-2 gap-5 mt-5">
+            {STRENGTH_STATS.map((s, i) => (
+              <Reveal key={s.zh} delay={i * 120}
+                className="group bg-[#2a251f] text-[#f8f5f0] p-8 flex items-center gap-8 hover:bg-[#a8895b] transition-colors duration-500">
+                <p className="font-serif-d text-5xl md:text-6xl font-medium shrink-0 leading-none">
+                  <CountUp end={s.value} prefix={s.prefix} suffix={lang === 'en' ? s.unitEn : s.unitZh} />
+                </p>
+                <div>
+                  <h3 className="font-serif-d text-xl font-medium">{lang === 'en' ? s.en : s.zh}</h3>
+                  <p className="text-[12px] text-[#d8d0c2] mt-1.5 group-hover:text-white/85 transition-colors">{lang === 'en' ? s.labelEn : s.labelZh}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 生产流程 */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
@@ -185,8 +278,8 @@ export default function Craftsmanship() {
         </div>
       </section>
 
-            {/* 服务与交付 */}
-            <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
+      {/* 服务与交付 */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
         <SectionHead en="SERVICE & DELIVERY" zh="服务与交付" enTitle="Service & Delivery" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-14">
           {SERVICES.map((s, i) => (
@@ -267,16 +360,16 @@ export default function Craftsmanship() {
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 mt-14">
               {PARTNERS.map(p => (
                 <span key={p}
-                className="font-serif-d text-2xl md:text-3xl font-medium tracking-wide text-[#2a251f] hover:text-[#a8895b] transition-colors cursor-default md:px-10 md:border-r last:border-0 border-[#d8d0c2]">
-                {p}
-              </span>
-            ))}
-          </div>
-        </Reveal>
-      </div>
-    </section>
+                  className="font-serif-d text-2xl md:text-3xl font-medium tracking-wide text-[#2a251f] hover:text-[#a8895b] transition-colors cursor-default md:px-10 md:border-r last:border-0 border-[#d8d0c2]">
+                  {p}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
-    <TechModal tech={active !== null ? TECHS[active] : null} onClose={() => setActive(null)} closeLabel={t('关闭', 'Close')} lang={lang} />
-  </>
-);
+      <TechModal tech={active !== null ? TECHS[active] : null} onClose={() => setActive(null)} closeLabel={t('关闭', 'Close')} lang={lang} />
+    </>
+  );
 }
