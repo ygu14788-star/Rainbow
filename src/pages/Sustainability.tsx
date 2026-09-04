@@ -120,6 +120,39 @@ export default function Sustainability({ go }: { go: Go }) {
         </div>
       </section>
 
+      {/* 社会责任认证 */}
+            <section className="bg-[#f2eee6] py-20 md:py-24 text-center">
+        ...
+      </section>
+      {/* 彩虹公益·暖冬项目 */}
+      <section className="bg-[#f8f5f0] py-20 md:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            {/* 左侧文字 */}
+            <Reveal>
+              <p className="text-[11px] tracking-[0.35em] text-[#a8895b] mb-3">RAINBOW CHARITY · WARM WINTER PROJECT</p>
+              <h2 className="font-serif-d text-4xl md:text-5xl font-medium">彩虹公益·暖冬项目</h2>
+              <p className="text-[15px] text-[#6b6257] mt-4 italic">温暖童心，守护冬日暖阳</p>
+              <div className="w-10 h-px bg-[#a8895b] my-8" />
+              <p className="text-[14px] leading-[2] text-[#6b6257]">
+                {t('闰博尔积极投身公益事业，每年冬季为偏远地区的孩子们捐赠亲手编织的帽子、围巾与手套。一针一线，承载着我们对下一代的关爱与温度。我们坚信，企业的价值不仅在于创造优质的产品，更在于回馈社会、传递温暖。',
+                   'Rainbow is actively committed to public welfare. Every winter, we donate hand-knitted hats, scarves and gloves to children in remote areas. Every stitch carries our care and warmth for the next generation. We believe that a company\'s value lies not only in creating excellent products, but also in giving back to society and spreading warmth.')}
+              </p>
+              <p className="text-[13px] leading-relaxed text-[#8a8177] mt-4">
+                {t('自项目启动以来，已累计为超过 3,000 名儿童送去暖冬物资。未来，我们将继续扩大公益版图，让针织的温度触达更多需要帮助的角落。',
+                   'Since its launch, the project has delivered warm winter supplies to over 3,000 children. We will continue to expand our charitable reach, letting the warmth of knitwear touch more corners in need.')}
+              </p>
+            </Reveal>
+            {/* 右侧图片 */}
+            <Reveal delay={140}>
+              <div className="zoom-img aspect-[4/3]">
+                <img src={IMG('charity.jpg')} alt={t('彩虹公益暖冬项目', 'Rainbow Charity Warm Winter Project')} className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <p className="text-[11px] text-[#8a8177] mt-3 text-center tracking-wide">{t('孩子们戴上闰博尔捐赠的针织帽与围巾', 'Children wearing Rainbow-donated knit hats and scarves')}</p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
       {/* 可持续材料 */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
         <div className="grid md:grid-cols-3 gap-14 items-start">
