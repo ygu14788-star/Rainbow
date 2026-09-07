@@ -303,7 +303,7 @@ export const STRENGTHS = [
   { img: '', tagZh: '', tagEn: '', zh: '精准版型与纸样把控', en: 'Precise Pattern & Fit Control',
     descZh: '在制作版型要求严苛的款式方面拥有丰富经验，精准的纸样制作与稳定一致的版型效果，是对品质有极致要求的品牌的首选伙伴。',
     descEn: 'Extensive experience in fit-critical styles. Precise pattern-making and consistently accurate fit make us the trusted partner for quality-driven brands.' },
-  { img: '', tagZh: 'EST. 2024', tagEn: 'EST. 2024', zh: '数字化样衣 · STYLE 3D', en: 'Digital Sampling · STYLE 3D',
+  { img: 'style.jpg', tagZh: 'EST. 2024', tagEn: 'EST. 2024', zh: '数字化样衣 · STYLE 3D', en: 'Digital Sampling · STYLE 3D',
     descZh: '自2024年成立数字内容团队，运用 STYLE 3D 软件实现首轮样衣数字化，大幅缩短开发周期并降低打样成本。',
     descEn: 'Since 2024, our in-house digital content team delivers first-round samples via STYLE 3D, significantly shortening development cycles and reducing sampling costs.' },
 ];
