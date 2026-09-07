@@ -120,11 +120,9 @@ export default function Craftsmanship() {
               {/* 版型纸样 */}
               <Reveal delay={200}>
                 <div className="group bg-white border border-[#e4ddd1] p-5 flex gap-5 items-center hover:border-[#a8895b] hover:shadow-md transition-all duration-300 flex-1">
-                  <div className="w-24 h-24 shrink-0 bg-[#f2eee6] flex items-center justify-center text-[#a8895b] group-hover:bg-[#a8895b] group-hover:text-white transition-colors duration-300">
-                    <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M8 40L40 8l4 4-8 8 4 4-24 24H8v-8z" />
-                      <path d="M28 20l4 4M22 26l4 4M16 32l4 4" />
-                    </svg>
+                <div className="zoom-img w-24 h-24 shrink-0 overflow-hidden">
+                    <img src={STRENGTHS[2].img} alt={lang === 'en' ? STRENGTHS[2].en : STRENGTHS[2].zh}
+                      className="w-full h-full object-cover" loading="lazy" />
                   </div>
                   <div>
                     <h3 className="font-serif-d text-xl font-medium group-hover:text-[#a8895b] transition-colors">{lang === 'en' ? STRENGTHS[2].en : STRENGTHS[2].zh}</h3>
@@ -136,9 +134,12 @@ export default function Craftsmanship() {
               {/* 数字化样衣 */}
               <Reveal delay={300}>
                 <div className="group bg-white border border-[#e4ddd1] p-5 flex gap-5 items-center hover:border-[#a8895b] hover:shadow-md transition-all duration-300 flex-1">
-                  <div className="w-24 h-24 shrink-0 bg-[#2a251f] flex flex-col items-center justify-center text-[#f8f5f0]">
-                    <span className="font-serif-d text-2xl font-medium leading-none">3D</span>
-                    <span className="text-[9px] tracking-[0.2em] text-[#a8895b] mt-1.5">{lang === 'en' ? STRENGTHS[3].tagEn : STRENGTHS[3].tagZh}</span>
+                <div className="zoom-img w-24 h-24 shrink-0 overflow-hidden relative">
+                    <img src={STRENGTHS[3].img} alt={lang === 'en' ? STRENGTHS[3].en : STRENGTHS[3].zh}
+                      className="w-full h-full object-cover" loading="lazy" />
+                    <span className="absolute bottom-1 left-1 bg-[#2a251f]/85 text-[#a8895b] text-[8px] tracking-[0.2em] px-1.5 py-0.5">
+                      EST. 2024
+                    </span>
                   </div>
                   <div>
                     <h3 className="font-serif-d text-xl font-medium group-hover:text-[#a8895b] transition-colors">{lang === 'en' ? STRENGTHS[3].en : STRENGTHS[3].zh}</h3>
