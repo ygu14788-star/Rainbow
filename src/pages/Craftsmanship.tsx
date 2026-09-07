@@ -128,6 +128,7 @@ export default function Craftsmanship() {
                     <h3 className="font-serif-d text-xl font-medium group-hover:text-[#a8895b] transition-colors">{lang === 'en' ? STRENGTHS[2].en : STRENGTHS[2].zh}</h3>
                     <p className="text-[12px] leading-relaxed text-[#8a8177] mt-2">{lang === 'en' ? STRENGTHS[2].descEn : STRENGTHS[2].descZh}</p>
                   </div>
+       
                 </div>
               </Reveal>
 
