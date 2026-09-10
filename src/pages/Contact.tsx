@@ -29,7 +29,7 @@ export default function Contact() {
           <h2 className="font-serif-d text-4xl md:text-5xl font-medium mb-10">{t('给我们留言', 'Leave Us a Message')}</h2>
           <div className="border border-[#e4ddd1] bg-white overflow-hidden" style={{ height: '700px' }}>
             <iframe
-              src="https://rx5sfimtkat.feishu.cn/share/base/form/shrcnMlXsMpIyEK5E3HCR2mdmRc"
+              src="https://rx5sfimtkat.feishu.cn/share/base/form/shrcnvjbSkSiL9kgDJIaJWqKush"
               className="w-full h-full"
               style={{ border: 'none' }}
               title={t('给我们留言', 'Leave Us a Message')}
@@ -37,7 +37,7 @@ export default function Contact() {
           </div>
           <p className="text-[12px] text-[#8a8177] mt-4">
             {t('表单加载较慢或无法显示？', 'Form not loading?')}{' '}
-            <a href="https://rx5sfimtkat.feishu.cn/share/base/form/shrcnMlXsMpIyEK5E3HCR2mdmRc"
+            <a href="https://rx5sfimtkat.feishu.cn/share/base/form/shrcnvjbSkSiL9kgDJIaJWqKush"
                target="_blank" rel="noreferrer"
                className="underline hover:text-[#a8895b] transition-colors">
               {t('点击直接打开留言表单', 'Open the form directly')}
