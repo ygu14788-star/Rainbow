@@ -232,7 +232,7 @@ export default function Craftsmanship() {
                 { no: '20', name: t('挂吊牌', 'Tagging') },
                 { no: '19', name: t('成品检验', 'Final Inspection') },
                 { no: '18', name: t('复尺检验', 'Re-measurement') },
-                { no: '17', name: t('整烫', 'Final Pressing') },
+                { no: '17', name: t('整烫', 'Steaming') },
                 { no: '16', name: t('半成品检验', 'Semi-finished QC') },
                 { no: '15', name: t('平车（订标，纽扣，拉链等）', 'Overlock (Labels, Buttons, Zippers)') },
                 { no: '14', name: t('小烫', 'Light Pressing') },
