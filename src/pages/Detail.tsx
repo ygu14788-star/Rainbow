@@ -14,7 +14,7 @@ function Back({ go, label }: { go: Go; label: string }) {
 
 /* ---------- 系列页：展示该系列的产品 ---------- */
 export function CollectionDetail({ id, go }: { id: string; go: Go }) {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const { COLLECTIONS, PRODUCTS } = useData();
   const col = COLLECTIONS.find(c => c.id === id);
   const items = PRODUCTS.filter(p => !col || p.series.includes(col.id));
@@ -27,8 +27,8 @@ export function CollectionDetail({ id, go }: { id: string; go: Go }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#2a251f]/55 to-transparent" />
         <div className="absolute bottom-0 inset-x-0 max-w-[1400px] mx-auto px-6 md:px-12 pb-10 text-white">
           <Reveal>
-            <p className="text-[11px] tracking-[0.35em] opacity-80">{col ? col.en : 'ALL PRODUCTS'}</p>
-            <h1 className="font-serif-d text-4xl md:text-6xl font-medium mt-2">{col ? col.zh : t('全部产品', 'All Products')}</h1>
+          <p className="text-[11px] tracking-[0.35em] opacity-80">{col ? (lang === 'en' ? col.zh : col.en) : 'ALL PRODUCTS'}</p>
+          <h1 className="font-serif-d text-4xl md:text-6xl font-medium mt-2">{col ? col.zh : t('全部产品', 'All Products')}</h1>
             {col && <p className="mt-3 text-[14px] opacity-90 max-w-lg">{col.desc}</p>}
           </Reveal>
         </div>
@@ -44,7 +44,7 @@ export function CollectionDetail({ id, go }: { id: string; go: Go }) {
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <p className="text-[14px] mt-4 group-hover:text-[#a8895b] transition-colors">{p.name}</p>
-                <p className="text-[11px] text-[#8a8177] tracking-wider">{p.en}</p>
+                {lang !== 'en' && <p className="text-[11px] text-[#8a8177] tracking-wider">{p.en}</p>}
               </button>
             </Reveal>
           ))}
@@ -56,7 +56,7 @@ export function CollectionDetail({ id, go }: { id: string; go: Go }) {
 
 /* ---------- 单品详情页：细节图 + 针织工艺 ---------- */
 export function ProductDetail({ id, go }: { id: string; go: Go }) {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const { COLLECTIONS, PRODUCTS } = useData();
   const p = PRODUCTS.find(x => x.id === id);
   useEffect(() => window.scrollTo(0, 0), [id]);
@@ -78,7 +78,7 @@ export function ProductDetail({ id, go }: { id: string; go: Go }) {
             ))}
           </div>
           <h1 className="font-serif-d text-4xl md:text-5xl font-medium">{p.name}</h1>
-          <p className="text-[13px] tracking-[0.25em] text-[#a8895b] mt-2">{p.en}</p>
+          {lang !== 'en' && <p className="text-[13px] tracking-[0.25em] text-[#a8895b] mt-2">{p.en}</p>}
           <div className="w-10 h-px bg-[#a8895b] my-7" />
           <p className="text-[14px] leading-[2] text-[#6b6257]">{p.desc}</p>
 

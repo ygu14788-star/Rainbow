@@ -24,8 +24,8 @@ export default function Collections({ go }: { go: Go }) {
             <Reveal key={c.id} delay={i * 100}>
               <button onClick={() => go('collections', c.id)} className="group block w-full text-left bg-white">
                 <div className="p-6 pb-2">
-                  <h3 className="font-serif-d text-2xl font-medium">{c.zh}</h3>
-                  <p className="text-[13px] text-[#8a8177] mt-1">{c.en}</p>
+                <h3 className="font-serif-d text-2xl font-medium">{c.zh}</h3>
+                {lang !== 'en' && <p className="text-[13px] text-[#8a8177] mt-1">{c.en}</p>}
                   <p className="text-[12px] leading-relaxed text-[#8a8177] mt-3 min-h-[54px]">{c.desc}</p>
                   <span className="arrow-link text-[12px] tracking-widest border-b border-[#2a251f] pb-0.5 mt-2">
                     {t('探索系列', 'Explore')} <span className="arr">→</span>
