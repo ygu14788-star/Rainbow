@@ -3,7 +3,6 @@ import { Reveal, Hero, SectionHead } from '../components/chrome';
 import { useLang, useData } from '../i18n';
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
   const [openFaq, setOpenFaq] = useState(-1);
   const { t, lang } = useLang();
   const { CONTACT, FAQS, SOCIALS, HERO_CONTACT, IMG } = useData();
@@ -35,29 +34,22 @@ export default function Contact() {
         <Reveal>
           <p className="text-[13px] tracking-widest text-[#8a8177] mb-2">{t('获取联系', 'GET IN TOUCH')}</p>
           <h2 className="font-serif-d text-4xl md:text-5xl font-medium mb-10">{t('给我们留言', 'Leave Us a Message')}</h2>
-          <form onSubmit={submit} className="space-y-7">
-            {[
-              { label: t('姓名 *', 'Name *'), type: 'text', ph: t('请输入姓名', 'Your name'), req: true },
-              { label: t('邮箱 *', 'Email *'), type: 'email', ph: t('请输入邮箱', 'Your email'), req: true },
-              { label: t('电话', 'Phone'), type: 'tel', ph: t('请输入电话号码', 'Your phone number'), req: false },
-            ].map(f => (
-              <div key={f.label}>
-                <label className="text-[13px] text-[#6b6257]">{f.label}</label>
-                <input type={f.type} placeholder={f.ph} required={f.req}
-                  className="w-full mt-2 bg-transparent border-b border-[#d8d0c2] focus:border-[#2a251f] outline-none py-2.5 text-[14px] placeholder:text-[#b6ada0] transition-colors" />
-              </div>
-            ))}
-            <div>
-              <label className="text-[13px] text-[#6b6257]">{t('留言 *', 'Message *')}</label>
-              <textarea placeholder={t('请输入留言', 'Your message')} required rows={4}
-                className="w-full mt-2 bg-transparent border-b border-[#d8d0c2] focus:border-[#2a251f] outline-none py-2.5 text-[14px] placeholder:text-[#b6ada0] resize-none transition-colors" />
-            </div>
-            <button type="submit"
-              className="bg-[#2a251f] text-[#f8f5f0] px-10 py-3 text-[13px] tracking-[0.25em] hover:bg-[#a8895b] transition-colors duration-400">
-              {sent ? t('已发送 ✓', 'Sent ✓') : t('发送留言', 'Send Message')}
-            </button>
-            {sent && <p className="text-[13px] text-[#a8895b]">{t('感谢您的留言，我们会尽快与您联系。', 'Thank you for your message. We will get back to you shortly.')}</p>}
-          </form>
+          <div className="border border-[#e4ddd1] bg-white overflow-hidden" style={{ height: '700px' }}>
+            <iframe
+              src="https://rx5sfimtkat.feishu.cn/share/base/form/shrcnMlXsMpIyEK5E3HCR2mdmRc"
+              className="w-full h-full"
+              style={{ border: 'none' }}
+              title={t('给我们留言', 'Leave Us a Message')}
+            />
+          </div>
+          <p className="text-[12px] text-[#8a8177] mt-4">
+            {t('表单加载较慢或无法显示？', 'Form not loading?')}{' '}
+            <a href="https://rx5sfimtkat.feishu.cn/share/base/form/shrcnMlXsMpIyEK5E3HCR2mdmRc"
+               target="_blank" rel="noreferrer"
+               className="underline hover:text-[#a8895b] transition-colors">
+              {t('点击直接打开留言表单', 'Open the form directly')}
+            </a>
+          </p>
         </Reveal>
         <Reveal delay={150}>
           <div className="zoom-img aspect-[4/3] md:sticky md:top-28">
