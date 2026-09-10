@@ -7,13 +7,6 @@ export default function Contact() {
   const { t, lang } = useLang();
   const { CONTACT, FAQS, SOCIALS, HERO_CONTACT, IMG } = useData();
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setSent(false), 4000);
-  };
-
   const info = [
     { label: t('地址', 'Address'), value: CONTACT.address, icon: <path d="M24 44s-14-12-14-24a14 14 0 0128 0c0 12-14 24-14 24zm0-19a5 5 0 100-10 5 5 0 000 10z" /> },
     { label: t('电话', 'Phone'), value: CONTACT.phone, icon: <path d="M10 6h8l4 10-6 4a26 26 0 0012 12l4-6 10 4v8a4 4 0 01-4 4A34 34 0 016 10a4 4 0 014-4z" /> },
