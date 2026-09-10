@@ -334,7 +334,7 @@ export const TIMELINE = [
 ];
 
 export const VISION = [
-  { period: '3-5年', desc: '成为3D无缝编织领域技术引领者，树立中国制造新形象。' },
+  { period: '', desc: '成为3D无缝编织领域技术引领者，树立中国制造新形象。' },
 ];
 
 export const MISSION = ['为客户创造价值', '为行业发展创造价值', '为员工的美好生活创造价值', '坚守品质目标'];

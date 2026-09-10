@@ -64,7 +64,7 @@ export default function Story() {
                     <span className="w-px flex-1 bg-[#e4ddd1]" />
                   </div>
                   <div className="pb-2">
-                    <p className="font-medium">{v.period}</p>
+                  {v.period && <p className="font-medium">{v.period}</p>}
                     <p className="text-[13px] leading-relaxed text-[#8a8177] mt-2">{v.desc}</p>
                   </div>
                 </div>

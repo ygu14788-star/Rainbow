@@ -311,7 +311,7 @@ export const TIMELINE = [
 ];
 
 export const VISION = [
-  { period: '3–5 Years', desc: 'Becoming a technology leader in 3D seamless knitting and a new image of Chinese manufacturing.' },
+  { period: '', desc: ' Be a technology leader in 3D seamless knitting and a new image of Chinese manufacturing.' },
 ];
 
 export const MISSION = ['Create value for customers', 'Create value for the industry', 'Create value for a better life for our employees', 'Stay committed to quality'];
