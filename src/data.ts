@@ -315,10 +315,10 @@ export const STRENGTH_STATS = [
 
 // ---------- 服务与交付 ----------
 export const SERVICES = [
-  { value: 30, prefix: '', suffix: '万+', unitZh: '件/年', unitEn: 'pcs/year', zh: '年产能', en: 'Annual Capacity', descZh: '月产 3 万件毛衣，年产 30 万件', descEn: '30,000 pieces monthly, 300,000 pieces annually' },
-  { value: 10, prefix: '7-', suffix: '', unitZh: '天', unitEn: 'days', zh: '样品交付周期', en: 'Sample Lead Time', descZh: '从确认需求到样品寄出', descEn: 'From confirmed requirement to sample dispatch' },
-  { value: 70, prefix: '45-', suffix: '', unitZh: '天', unitEn: 'days', zh: '大货交付周期', en: 'Bulk Lead Time', descZh: '视订单量与工艺复杂度而定', descEn: 'Depending on order volume and complexity' },
-  { value: 0, prefix: '', suffix: '', unitZh: '', unitEn: '', zh: '合作模式', en: 'Trade Terms', descZh: 'FOB · CIF · DAP · DDP（DDP 仅限欧洲）', descEn: 'FOB · CIF · DAP · DDP (DDP for EU only)' },
+  { value: 30, prefix: '', suffix: '万+', suffixEn: '0K+', unitZh: '件/年', unitEn: 'pcs/year', zh: '年产能', en: 'Annual Capacity', descZh: '月产 3 万件毛衣，年产 30 万件', descEn: '30,000 pieces monthly, 300,000 pieces annually' },
+  { value: 10, prefix: '7-', suffix: '', suffixEn: '', unitZh: '天', unitEn: 'days', zh: '样品交付周期', en: 'Sample Lead Time', descZh: '从确认需求到样品寄出', descEn: 'From confirmed requirement to sample dispatch' },
+  { value: 70, prefix: '45-', suffix: '', suffixEn: '', unitZh: '天', unitEn: 'days', zh: '大货交付周期', en: 'Bulk Lead Time', descZh: '视订单量与工艺复杂度而定；翻单 20 天', descEn: 'Depending on order volume and complexity; repeat orders in 20 days'},
+  { value: 0, prefix: '', suffix: '', unitZh: '', unitEn: '', zh: '合作模式', en: 'Trade Terms', descZh: 'FOB · CIF · DAP · DDP', descEn: 'FOB · CIF · DAP · DDP' },
 ];
 
 export const TRADE_TERMS = [
@@ -334,8 +334,7 @@ export const TIMELINE = [
 ];
 
 export const VISION = [
-  { period: '2-3年', desc: '突破纺织服装行业限制，拓展无缝编织的跨界应用。' },
-  { period: '3-5年', desc: '实现机器人皮肤、医疗、汽车等领域产品落地及量产，成为3D无缝编织领域技术引领者，树立中国制造新形象。' },
+  { period: '3-5年', desc: '成为3D无缝编织领域技术引领者，树立中国制造新形象。' },
 ];
 
 export const MISSION = ['为客户创造价值', '为行业发展创造价值', '为员工的美好生活创造价值', '坚守品质目标'];

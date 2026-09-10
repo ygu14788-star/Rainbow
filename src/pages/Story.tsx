@@ -55,7 +55,7 @@ export default function Story() {
           <Reveal>
             <p className="text-[11px] tracking-[0.35em] text-[#a8895b]">VISION</p>
             <h3 className="font-serif-d text-3xl font-medium mt-3">{t('公司愿景', 'Our Vision')}</h3>
-            <p className="text-lg mt-1 mb-8">{t('跨界突破与技术引领', 'Cross-Industry Breakthroughs & Technical Leadership')}</p>
+            <p className="text-lg mt-1 mb-8">{t('技术引领', 'Technical Leadership')}</p>
             <div className="space-y-8">
               {VISION.map(v => (
                 <div key={v.period} className="flex gap-5 group">

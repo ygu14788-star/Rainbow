@@ -70,7 +70,7 @@ export default function Craftsmanship() {
         title={t('高端针织产品制造', 'Premium Knitwear Manufacturing')}
         lines={t(
           '闰博尔致力于高端精纺针织品的制造，|自成立以来，一直以建立一个绿色工厂为愿景。|我们始终秉承"质量第一"的原则，|承诺产品出厂合格率高达 99%。',
-          'Rainbow is dedicated to manufacturing premium fine-gauge knitwear.|Since our founding, our vision has been to build a green factory.|We always uphold the principle of "Quality First",|with a factory pass rate of up to 99%.'
+          'Rainbow is dedicated to manufacturing premium cross all gauge knitwear.|Since our founding, our vision has been to build a green factory.|We always uphold the principle of "Quality First",|with a factory pass rate of up to 99%.'
         ).split('|')}
         img={HERO_CRAFT} tall
       />
@@ -292,7 +292,7 @@ export default function Craftsmanship() {
               <p className="font-serif-d text-3xl md:text-[42px] font-medium text-[#2a251f] mt-4 group-hover:text-[#a8895b] transition-colors duration-300 leading-tight">
                 {s.value > 0 ? (
                   <CountUp end={s.value} prefix={s.prefix}
-                    suffix={s.suffix + (lang === 'en' ? ' ' + s.unitEn : ' ' + s.unitZh)} />
+                  suffix={lang === 'en' ? s.suffixEn + ' ' + s.unitEn : s.suffix + ' ' + s.unitZh} />
                 ) : (
                   <span className="text-2xl md:text-[26px] tracking-wide">{lang === 'en' ? s.descEn : s.descZh}</span>
                 )}

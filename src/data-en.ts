@@ -264,9 +264,9 @@ export const TECHS = [
 ];
 
 export const PROMISES = [
-  { title: 'Quality First', desc: 'We always uphold the principle of "Quality First", crafting every knitted product with dedication.' },
-  { title: 'Lifetime Warranty', desc: 'We provide a lifetime warranty on our products, letting quality accompany every important moment.' },
-  { title: '99% Pass Rate', desc: 'We promise a factory pass rate of up to 99%, guarding every finished piece with rigorous standards.' },
+  { title: 'Quality First', desc: 'We always uphold the principle of "Quality First", crafting every knitted product. Quality is our first language' },
+  { title: 'Lifetime Warranty', desc: 'We stand behind every piece we shipped.' },
+  { title: '99% Pass Rate', desc: 'We maintain 99% first pass rate at final inspection.' },
 ];
 
 // ---------- 核心优势 ----------
@@ -292,10 +292,10 @@ export const STRENGTH_STATS = [
 
 // ---------- 服务与交付 ----------
 export const SERVICES = [
-  { value: 30, prefix: '', suffix: '万+', unitZh: '件/年', unitEn: 'pcs/year', zh: '年产能', en: 'Annual Capacity', descZh: '月产 3 万件毛衣，年产 30 万件', descEn: '30,000 pieces monthly, 300,000 pieces annually' },
-  { value: 10, prefix: '7-', suffix: '', unitZh: '天', unitEn: 'days', zh: '样品交付周期', en: 'Sample Lead Time', descZh: '从确认需求到样品寄出', descEn: 'From confirmed requirement to sample dispatch' },
-  { value: 70, prefix: '45-', suffix: '', unitZh: '天', unitEn: 'days', zh: '大货交付周期', en: 'Bulk Lead Time', descZh: '视订单量与工艺复杂度而定', descEn: 'Depending on order volume and complexity' },
-  { value: 0, prefix: '', suffix: '', unitZh: '', unitEn: '', zh: '合作模式', en: 'Trade Terms', descZh: 'FOB · CIF · DAP · DDP（DDP 仅限欧洲）', descEn: 'FOB · CIF · DAP · DDP (DDP for EU only)' },
+  { value: 30, prefix: '', suffix: '万+', suffixEn: '0K+', unitZh: '件/年', unitEn: 'pcs/year', zh: '年产能', en: 'Annual Capacity', descZh: '月产 3 万件毛衣，年产 30 万件', descEn: '30,000 pieces monthly, 300,000 pieces annually' },
+  { value: 10, prefix: '7-', suffix: '', suffixEn: '', unitZh: '天', unitEn: 'days', zh: '样品交付周期', en: 'Sample Lead Time', descZh: '从确认需求到样品寄出', descEn: 'From confirmed requirement to sample dispatch' },
+  { value: 70, prefix: '45-', suffix: '', suffixEn: '', unitZh: '天', unitEn: 'days', zh: '大货交付周期', en: 'Bulk Lead Time', descZh: '视订单量与工艺复杂度而定；翻单 20 天', descEn: 'Depending on order volume and complexity; repeat orders in 20 days' },
+  { value: 0, prefix: '', suffix: '', unitZh: '', unitEn: '', zh: '合作模式', en: 'Trade Terms', descZh: 'FOB · CIF · DAP · DDP', descEn: 'FOB · CIF · DAP · DDP' },
 ];
 
 export const TRADE_TERMS = [
@@ -311,8 +311,7 @@ export const TIMELINE = [
 ];
 
 export const VISION = [
-  { period: '2–3 Years', desc: 'Break through the limits of the textile and apparel industry, expanding cross-industry applications of seamless knitting.' },
-  { period: '3–5 Years', desc: 'Bring products for robotic skin, medical and automotive fields to market and mass production, becoming a technology leader in 3D seamless knitting and a new image of Chinese manufacturing.' },
+  { period: '3–5 Years', desc: 'Becoming a technology leader in 3D seamless knitting and a new image of Chinese manufacturing.' },
 ];
 
 export const MISSION = ['Create value for customers', 'Create value for the industry', 'Create value for a better life for our employees', 'Stay committed to quality'];
